@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file:///Data/git/Learning/PluginTest/platforms/android/CordovaLib/CordovaLib.iml" filepath="/Data/git/Learning/PluginTest/platforms/android/CordovaLib/CordovaLib.iml" />
+      <module fileurl="file:///Data/git/Learning/PluginTest/platforms/android/android.iml" filepath="/Data/git/Learning/PluginTest/platforms/android/android.iml" />
+    </modules>
+  </component>
+</project>
