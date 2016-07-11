@@ -4,16 +4,40 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"CameraPreview\"><param name=\"ios-package\" onload=\"true\" value=\"CameraPreview\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "bidchat-plugin-camerapreview": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {},
-    "modules": [],
+    "modules": [
+        {
+            "file": "plugins/bidchat-plugin-camerapreview/www/CameraPreview.js",
+            "id": "bidchat-plugin-camerapreview.CameraPreview",
+            "pluginId": "bidchat-plugin-camerapreview",
+            "clobbers": [
+                "cordova.plugins.camerapreview"
+            ]
+        }
+    ],
     "plugin_metadata": {
-        "cordova-plugin-whitelist": "1.2.2"
+        "cordova-plugin-whitelist": "1.2.2",
+        "bidchat-plugin-camerapreview": "1.0.0"
     }
 }

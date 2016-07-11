@@ -15,6 +15,15 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
+		23F3D726A2954673BC161381 /* CameraPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9375024F4CB298E450BE /* CameraPreview.m */; };
+		4A2E902F4D9643C29F23608E /* CameraSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427893D8F9148A99A5A3FB5 /* CameraSessionManager.m */; };
+		561B953CE64F4490ADCB10B7 /* CameraRenderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E378781A125434683EFEEDF /* CameraRenderController.m */; };
+		C345323BD6214104B0A11DD1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8185A6139B4B989151F526 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E6ECE4E0B6324D3A93BE7AF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9943B2F0DB41999E6C6922 /* CoreLocation.framework */; };
+		290D705BCC67444CBFAE459C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C10E26155CC4A368329F7B6 /* CoreImage.framework */; };
+		8F9D6775A0EC4766BEF313EB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C04C2F4D69948DDB48ADE30 /* OpenGLES.framework */; };
+		FBE0723CFE9E4E6AB9FA03C0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA037DD6ED6642ECA83F8538 /* GLKit.framework */; };
+		78EBE1BBFCCA4F958DBC3305 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527916CF0E0E47D090C5930E /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,18 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "PluginTest/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		55DD9375024F4CB298E450BE /* CameraPreview.m */ = {isa = PBXFileReference; name = "CameraPreview.m"; path = "bidchat-plugin-camerapreview/CameraPreview.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8427893D8F9148A99A5A3FB5 /* CameraSessionManager.m */ = {isa = PBXFileReference; name = "CameraSessionManager.m"; path = "bidchat-plugin-camerapreview/CameraSessionManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0E378781A125434683EFEEDF /* CameraRenderController.m */ = {isa = PBXFileReference; name = "CameraRenderController.m"; path = "bidchat-plugin-camerapreview/CameraRenderController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F3E2596F711F457BB8119C09 /* CameraPreview.h */ = {isa = PBXFileReference; name = "CameraPreview.h"; path = "bidchat-plugin-camerapreview/CameraPreview.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		67584610FC4B4C3B978C0BB4 /* CameraSessionManager.h */ = {isa = PBXFileReference; name = "CameraSessionManager.h"; path = "bidchat-plugin-camerapreview/CameraSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1DA44B4223C44A21AC7492D6 /* CameraRenderController.h */ = {isa = PBXFileReference; name = "CameraRenderController.h"; path = "bidchat-plugin-camerapreview/CameraRenderController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		CE8185A6139B4B989151F526 /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		0A9943B2F0DB41999E6C6922 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9C10E26155CC4A368329F7B6 /* CoreImage.framework */ = {isa = PBXFileReference; name = "CoreImage.framework"; path = "System/Library/Frameworks/CoreImage.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		2C04C2F4D69948DDB48ADE30 /* OpenGLES.framework */ = {isa = PBXFileReference; name = "OpenGLES.framework"; path = "System/Library/Frameworks/OpenGLES.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		DA037DD6ED6642ECA83F8538 /* GLKit.framework */ = {isa = PBXFileReference; name = "GLKit.framework"; path = "System/Library/Frameworks/GLKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		527916CF0E0E47D090C5930E /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +83,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				C345323BD6214104B0A11DD1 /* ImageIO.framework in Frameworks */,
+				E6ECE4E0B6324D3A93BE7AF8 /* CoreLocation.framework in Frameworks */,
+				290D705BCC67444CBFAE459C /* CoreImage.framework in Frameworks */,
+				8F9D6775A0EC4766BEF313EB /* OpenGLES.framework in Frameworks */,
+				FBE0723CFE9E4E6AB9FA03C0 /* GLKit.framework in Frameworks */,
+				78EBE1BBFCCA4F958DBC3305 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +158,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE8185A6139B4B989151F526 /* ImageIO.framework */,
+				0A9943B2F0DB41999E6C6922 /* CoreLocation.framework */,
+				9C10E26155CC4A368329F7B6 /* CoreImage.framework */,
+				2C04C2F4D69948DDB48ADE30 /* OpenGLES.framework */,
+				DA037DD6ED6642ECA83F8538 /* GLKit.framework */,
+				527916CF0E0E47D090C5930E /* CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,6 +189,12 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				55DD9375024F4CB298E450BE /* CameraPreview.m */,
+				8427893D8F9148A99A5A3FB5 /* CameraSessionManager.m */,
+				0E378781A125434683EFEEDF /* CameraRenderController.m */,
+				F3E2596F711F457BB8119C09 /* CameraPreview.h */,
+				67584610FC4B4C3B978C0BB4 /* CameraSessionManager.h */,
+				1DA44B4223C44A21AC7492D6 /* CameraRenderController.h */,
 			);
 			name = Plugins;
 			path = "PluginTest/Plugins";
@@ -270,6 +309,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				23F3D726A2954673BC161381 /* CameraPreview.m in Sources */,
+				4A2E902F4D9643C29F23608E /* CameraSessionManager.m in Sources */,
+				561B953CE64F4490ADCB10B7 /* CameraRenderController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
