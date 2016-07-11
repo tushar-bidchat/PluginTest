@@ -31,8 +31,18 @@ var app = {
 };
 
 function buttonOneClicked() {
-    alert("Button One Clicked");
-    cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+//    alert("Button One Clicked");
+//    cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+    //Using popup (option 1)
+    OAuth.initialize('YnytujS-j6aFzEoeUDc6vnnTwhE');
+    OAuth.popup('facebook')
+    .done(function(result) {
+      //use result.access_token in your API request 
+      //or use result.get|post|put|del|patch|me methods (see below)
+    })
+    .fail(function (err) {
+      //handle error with err
+    });
 }
 
 app.initialize();
