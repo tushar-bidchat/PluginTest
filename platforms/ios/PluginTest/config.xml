@@ -18,6 +18,7 @@
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
+    <access origin="https://oauth.io" />
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
