@@ -32,6 +32,7 @@ var app = {
 
 function buttonOneClicked() {
     alert("Button One Clicked");
+    cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
 }
 
 app.initialize();
