@@ -21,6 +21,7 @@ var app = {
 function buttonOneClicked() {
     // alert("Button One Clicked");
     // getCameraPicture();
+    getDeviceInfo();
 }
 
 /**
@@ -55,6 +56,16 @@ function handleOpenURL(url) {
   setTimeout(function() {
     alert("received url: " + url);
   }, 0);
+}
+
+/**
+ * Provides device information
+ **/  
+function getDeviceInfo() {
+    console.log("Platform = " + device.platform);
+    console.log("UUID = " + device.uuid);
+    console.log("Model = " + device.model);
+    console.log("Version = " + device.version);
 }
 
 app.initialize();
