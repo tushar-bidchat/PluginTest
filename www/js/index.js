@@ -51,4 +51,10 @@ function getCameraPicture() {
     navigator.camera.getPicture(onSuccess, onError, options);
 }
 
+function handleOpenURL(url) {
+  setTimeout(function() {
+    alert("received url: " + url);
+  }, 0);
+}
+
 app.initialize();
