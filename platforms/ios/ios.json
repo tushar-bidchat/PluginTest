@@ -26,6 +26,12 @@
                             "xml": "<string />",
                             "count": 1
                         }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>bidchat</string></array></dict></array>",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -39,6 +45,10 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -75,11 +85,20 @@
             "clobbers": [
                 "CameraPopoverHandle"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-customurlscheme/www/ios/LaunchMyApp.js",
+            "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+            "pluginId": "cordova-plugin-customurlscheme",
+            "clobbers": [
+                "window.plugins.launchmyapp"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-plugin-compat": "1.0.0",
-        "cordova-plugin-camera": "2.2.0"
+        "cordova-plugin-camera": "2.2.0",
+        "cordova-plugin-customurlscheme": "4.2.0"
     }
 }
