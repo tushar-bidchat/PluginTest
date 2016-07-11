@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        document.getElementById('cameraButton').addEventListener('click', showCamera, false);
     },
     // Bind Event Listeners
     //
@@ -47,5 +48,19 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function successCameraStart(callback){
+}
+function failureCameraStart(callback){
+}
+
+function showCamera(){
+  var tapEnabled = true; //enable tap take picture
+  var dragEnabled = true; //enable preview box drag across the screen
+  var toBack = true; //send preview box to the back of the webview
+  var rect = {x: 100, y: 100, width: 200, height:200};
+  var alpha = 1;
+  cordova.plugins.camerapreview.startCamera(rect, "back", tapEnabled, dragEnabled, toBack, alpha, successCameraStart, failureCameraStart);
+}
 
 app.initialize();
