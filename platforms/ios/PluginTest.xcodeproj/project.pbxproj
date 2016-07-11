@@ -21,6 +21,7 @@
 		220366EB1265405BAB87C67D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C375E30476A4976B6EA9EFC /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		0459E183864C4DA7BCC8960E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6113D07403844709E64E9CB /* CoreLocation.framework */; };
 		C65248896BDA46058A790379 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B86F07F0234B12B59374D8 /* AVFoundation.framework */; };
+		236E77E7120A4B30ACA0F695 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C8097FAB1A6947818D775EEC /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		9C375E30476A4976B6EA9EFC /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		D6113D07403844709E64E9CB /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		59B86F07F0234B12B59374D8 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C8097FAB1A6947818D775EEC /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		81553A69ECC14B8FA9F3FC65 /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				6035F42C130249ABA602F62C /* CDVCamera.h */,
 				844B2D7B0CDC4E4A923CA797 /* CDVJpegHeaderWriter.h */,
 				EC3AFF26C964465D852AF1D9 /* CDVExif.h */,
+				C8097FAB1A6947818D775EEC /* CDVDevice.m */,
+				81553A69ECC14B8FA9F3FC65 /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = "PluginTest/Plugins";
@@ -302,6 +307,7 @@
 				3D161F5235344E5B9D58FBC5 /* UIImage+CropScaleOrientation.m in Sources */,
 				F7149DF71F974FAB822E2603 /* CDVCamera.m in Sources */,
 				2288F469A8644AF6A1D106FB /* CDVJpegHeaderWriter.m in Sources */,
+				236E77E7120A4B30ACA0F695 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
