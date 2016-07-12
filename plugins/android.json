@@ -77,6 +77,9 @@
             "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
             "URI_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-add-swift-support": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {

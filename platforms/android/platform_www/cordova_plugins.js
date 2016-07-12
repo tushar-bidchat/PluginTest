@@ -439,7 +439,8 @@ module.exports.metadata =
     "cordova-plugin-insomnia": "4.2.0",
     "cordova-plugin-applepay": "0.0.1",
     "es6-promise-plugin": "3.0.2",
-    "io.branch.sdk": "2.1.7"
+    "io.branch.sdk": "2.1.7",
+    "cordova-plugin-add-swift-support": "1.3.1"
 };
 // BOTTOM OF METADATA
 });
