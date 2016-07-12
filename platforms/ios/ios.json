@@ -59,6 +59,10 @@
                         {
                             "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"ios-package\" value=\"YoikScreenOrientation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -126,6 +130,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -552,6 +559,15 @@
             "merges": [
                 "cordova.plugins.screenorientation"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+            "id": "cordova-plugin-vibration.notification",
+            "pluginId": "cordova-plugin-vibration",
+            "merges": [
+                "navigator.notification",
+                "navigator"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -569,6 +585,7 @@
         "cordova-plugin-media": "2.3.0",
         "cordova-plugin-media-capture": "1.3.0",
         "cordova-plugin-network-information": "1.2.1",
-        "cordova-plugin-screen-orientation": "1.4.2"
+        "cordova-plugin-screen-orientation": "1.4.2",
+        "cordova-plugin-vibration": "2.1.1"
     }
 }
