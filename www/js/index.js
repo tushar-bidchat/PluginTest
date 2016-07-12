@@ -27,7 +27,9 @@ function buttonOneClicked() {
     
     // showInformationMessage('Button Clicked Natively !');
     
-    showCurrentGeoLocation();
+    // showCurrentGeoLocation();
+    
+    showIsWifiAvailable();
 }
 
 function showInformationMessage(message) {
@@ -42,6 +44,19 @@ function showInformationMessage(message) {
     'Information',  // title
     'Ok'            // buttonName
     );
+}
+
+// cordova-diagnostic-plugin Usage 
+function showIsWifiAvailable() {
+    var onSuccess = function(message) {
+        alert('Sucess : Wifi Available ' + message);
+    }
+    
+    var onError = function(message) {
+        alert('Error: ' + message.code);
+    }
+    
+    cordova.plugins.diagnostic.isWifiAvailable(onSuccess, onError);
 }
 
 function showCurrentGeoLocation () {
