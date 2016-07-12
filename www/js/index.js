@@ -15,13 +15,15 @@ var app = {
     // deviceready Event Handler
     onDeviceReady: function() {
         console.log("onDeviceReady");
+        console.log(navigator.compass);
     },
 };
     
 function buttonOneClicked() {
     // alert("Button One Clicked");
     // getCameraPicture();
-    getDeviceInfo();
+    // getDeviceInfo();
+    getDeviceOrientation();
 }
 
 /**
@@ -66,6 +68,19 @@ function getDeviceInfo() {
     console.log("UUID = " + device.uuid);
     console.log("Model = " + device.model);
     console.log("Version = " + device.version);
+}
+
+function getDeviceOrientation() {
+    
+    var onSuccess = function(heading) {
+        alert('Heading: ' + heading.magneticHeading);
+    }
+    
+    var onError = function(heading) {
+        alert('CompassError: ' + error.code);
+    }
+    
+    navigator.compass.getCurrentHeading(onSuccess, onError);
 }
 
 app.initialize();
