@@ -58,6 +58,9 @@
         },
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {
