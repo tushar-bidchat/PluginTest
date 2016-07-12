@@ -23,7 +23,23 @@ function buttonOneClicked() {
     // alert("Button One Clicked");
     // getCameraPicture();
     // getDeviceInfo();
-    getDeviceOrientation();
+    // getDeviceOrientation();
+    
+    showInformationMessage('Button Clicked Natively !');
+}
+
+function showInformationMessage(message) {
+    
+    var okPressed = function() {
+        console.log('Ok Pressed');
+    }
+    
+    navigator.notification.alert(
+    message,        // message
+    okPressed,      // callback
+    'Information',  // title
+    'Ok'            // buttonName
+    );
 }
 
 /**
