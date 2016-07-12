@@ -33,6 +33,7 @@
 		F7149DF71F974FAB822E2603 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 10062A15E7364C85905EE17B /* CDVCamera.m */; };
 		FE36153ECD3A4CCA9AC1B15A /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE1D2446B44D7781C35AEF /* CDVFile.m */; };
 		2D77B87F9CC0402D9DAB4881 /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D82E7F3E554186BADA96CA /* CDVGlobalization.m */; };
+		077A7A377FEF4FC68303599F /* CDVSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D42F42A1A91484B9D1B32AD /* CDVSound.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = PluginTest/config.xml; sourceTree = "<group>"; };
 		D7D82E7F3E554186BADA96CA /* CDVGlobalization.m */ = {isa = PBXFileReference; name = "CDVGlobalization.m"; path = "cordova-plugin-globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		0021CEE4725A4CC5A35B7ABA /* CDVGlobalization.h */ = {isa = PBXFileReference; name = "CDVGlobalization.h"; path = "cordova-plugin-globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9D42F42A1A91484B9D1B32AD /* CDVSound.m */ = {isa = PBXFileReference; name = "CDVSound.m"; path = "cordova-plugin-media/CDVSound.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		266C605B07514868A2A7C430 /* CDVSound.h */ = {isa = PBXFileReference; name = "CDVSound.h"; path = "cordova-plugin-media/CDVSound.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +244,8 @@
 				A53AA51AB8C14102B37DE7AA /* CDVLocation.h */,
 				D7D82E7F3E554186BADA96CA /* CDVGlobalization.m */,
 				0021CEE4725A4CC5A35B7ABA /* CDVGlobalization.h */,
+				9D42F42A1A91484B9D1B32AD /* CDVSound.m */,
+				266C605B07514868A2A7C430 /* CDVSound.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -376,6 +381,7 @@
 				BE08EA5FB4BF44DEB35F2656 /* CDVAssetLibraryFilesystem.m in Sources */,
 				32BACF199287405FB0A60A5F /* CDVLocation.m in Sources */,
 				2D77B87F9CC0402D9DAB4881 /* CDVGlobalization.m in Sources */,
+				077A7A377FEF4FC68303599F /* CDVSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

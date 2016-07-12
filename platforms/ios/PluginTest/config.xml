@@ -40,6 +40,9 @@
     <feature name="Globalization">
         <param name="ios-package" value="CDVGlobalization" />
     </feature>
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
