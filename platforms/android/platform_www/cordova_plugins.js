@@ -253,6 +253,20 @@ module.exports = [
         "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
         "id": "cordova-plugin-geolocation.PositionError",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+        "id": "cordova-plugin-globalization.GlobalizationError",
+        "clobbers": [
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+        "id": "cordova-plugin-globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -267,7 +281,8 @@ module.exports.metadata =
     "cordova-plugin-device-orientation": "1.0.4-dev",
     "cordova-plugin-dialogs": "1.2.1",
     "cordova-plugin-file": "4.2.0",
-    "cordova-plugin-geolocation": "2.2.1-dev"
+    "cordova-plugin-geolocation": "2.2.1-dev",
+    "cordova-plugin-globalization": "1.0.3"
 };
 // BOTTOM OF METADATA
 });
