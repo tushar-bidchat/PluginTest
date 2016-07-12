@@ -43,6 +43,9 @@
     <feature name="Media">
         <param name="ios-package" value="CDVSound" />
     </feature>
+    <feature name="Capture">
+        <param name="ios-package" value="CDVCapture" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
