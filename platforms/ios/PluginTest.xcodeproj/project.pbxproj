@@ -58,6 +58,9 @@
 		BF33835BF7F44E8FBD125897 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC8C7FE8354889A0371179 /* PassKit.framework */; };
 		9D6F05A4D01C428A92AFF345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D44EB5035C437BA34E8C1F /* Foundation.framework */; };
 		756EEE29A9F34F0BA59540FC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9E2A861AC74F78AD04C3AD /* Security.framework */; };
+		AA732CEAD0B54CCFA6616022 /* BranchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B9E438BC4B25A61131F3 /* BranchSDK.m */; };
+		03973E08B3C046A6A414644C /* AppDelegate+BranchSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA41AC19A0249238B90DA82 /* AppDelegate+BranchSdk.m */; };
+		AC6B7C7E242B4BB0A1337E73 /* Branch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526BFD056F742C7B11E1247 /* Branch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +169,10 @@
 		B2EC8C7FE8354889A0371179 /* PassKit.framework */ = {isa = PBXFileReference; name = "PassKit.framework"; path = "System/Library/Frameworks/PassKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		54D44EB5035C437BA34E8C1F /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		AE9E2A861AC74F78AD04C3AD /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B5F0B9E438BC4B25A61131F3 /* BranchSDK.m */ = {isa = PBXFileReference; name = "BranchSDK.m"; path = "io.branch.sdk/BranchSDK.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5EA41AC19A0249238B90DA82 /* AppDelegate+BranchSdk.m */ = {isa = PBXFileReference; name = "AppDelegate+BranchSdk.m"; path = "io.branch.sdk/AppDelegate+BranchSdk.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F35C4E8F274E45E79DCC39DA /* BranchSDK.h */ = {isa = PBXFileReference; name = "BranchSDK.h"; path = "io.branch.sdk/BranchSDK.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0526BFD056F742C7B11E1247 /* Branch.framework */ = {isa = PBXFileReference; name = "Branch.framework"; path = "PluginTest/Plugins/io.branch.sdk/Branch.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +197,7 @@
 				BF33835BF7F44E8FBD125897 /* PassKit.framework in Frameworks */,
 				9D6F05A4D01C428A92AFF345 /* Foundation.framework in Frameworks */,
 				756EEE29A9F34F0BA59540FC /* Security.framework in Frameworks */,
+				AC6B7C7E242B4BB0A1337E73 /* Branch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				B2EC8C7FE8354889A0371179 /* PassKit.framework */,
 				54D44EB5035C437BA34E8C1F /* Foundation.framework */,
 				AE9E2A861AC74F78AD04C3AD /* Security.framework */,
+				0526BFD056F742C7B11E1247 /* Branch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -353,6 +362,9 @@
 				800640EC36F943D29FDA6DB3 /* Insomnia.h */,
 				F735A175C2414B0AB92ED280 /* CDVApplePay.m */,
 				26DE2F6CF74247ECB3FAE37A /* CDVApplePay.h */,
+				B5F0B9E438BC4B25A61131F3 /* BranchSDK.m */,
+				5EA41AC19A0249238B90DA82 /* AppDelegate+BranchSdk.m */,
+				F35C4E8F274E45E79DCC39DA /* BranchSDK.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -502,6 +514,8 @@
 				B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */,
 				0B7AF55BE43649B9A9BDF33C /* Insomnia.m in Sources */,
 				FAE69A7B245B4554A7F795B8 /* CDVApplePay.m in Sources */,
+				AA732CEAD0B54CCFA6616022 /* BranchSDK.m in Sources */,
+				03973E08B3C046A6A414644C /* AppDelegate+BranchSdk.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +555,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"PluginTest/Plugins/cordova-plugin-applepay\"",
+					"\"PluginTest/Plugins/io.branch.sdk\"",
 				);
 			};
 			name = Debug;
@@ -567,6 +582,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"PluginTest/Plugins/cordova-plugin-applepay\"",
+					"\"PluginTest/Plugins/io.branch.sdk\"",
 				);
 			};
 			name = Release;

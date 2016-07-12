@@ -72,10 +72,18 @@
             "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
             "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "io.branch.sdk": {
+            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
+            "URI_SCHEME": "bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     }

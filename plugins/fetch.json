@@ -178,5 +178,26 @@
             "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
             "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat"
         }
+    },
+    "io.branch.sdk": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
+            "URI_SCHEME": "bidchat"
+        }
+    },
+    "es6-promise-plugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vstirbu/PromisesPlugin.git",
+            "subdir": "."
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }

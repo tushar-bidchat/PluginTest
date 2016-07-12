@@ -70,6 +70,9 @@
     <feature name="ApplePay">
         <param name="ios-package" value="CDVApplePay" />
     </feature>
+    <feature name="BranchSDK">
+        <param name="ios-package" value="BranchSDK" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

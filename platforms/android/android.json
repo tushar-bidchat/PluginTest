@@ -127,6 +127,10 @@
                         {
                             "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:host=\" \" android:pathPrefix=\"/\" android:scheme=\" \" /></intent-filter>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<intent-filter><data android:scheme=\"bidchat\" /><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /></intent-filter>",
+                            "count": 1
                         }
                     ],
                     "/manifest": [
@@ -139,6 +143,10 @@
                         {
                             "xml": "<receiver android:name=\"cordova.plugins.Diagnostic$LocationProviderChangedReceiver\"><intent-filter><action android:name=\"android.location.PROVIDERS_CHANGED\" /></intent-filter></receiver>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"io.branch.sdk.BranchKey\" android:value=\"key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -148,6 +156,10 @@
                     "/*": [
                         {
                             "xml": "<feature name=\"Diagnostic\"><param name=\"android-package\" value=\"cordova.plugins.Diagnostic\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BranchSDK\"><param name=\"android-package\" value=\"io.branch.BranchSDK\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -223,6 +235,14 @@
         "cordova-plugin-applepay": {
             "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
             "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "io.branch.sdk": {
+            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
+            "URI_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -628,6 +648,18 @@
             "clobbers": [
                 "window.plugins.insomnia"
             ]
+        },
+        {
+            "file": "plugins/es6-promise-plugin/www/promise.js",
+            "id": "es6-promise-plugin.Promise",
+            "runs": true
+        },
+        {
+            "file": "plugins/io.branch.sdk/www/branch.js",
+            "id": "io.branch.sdk.Branch",
+            "clobbers": [
+                "Branch"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -651,6 +683,8 @@
         "cordova.plugins.diagnostic": "3.1.0",
         "ionic-plugin-keyboard": "2.2.1",
         "cordova-plugin-insomnia": "4.2.0",
-        "cordova-plugin-applepay": "0.0.1"
+        "cordova-plugin-applepay": "0.0.1",
+        "es6-promise-plugin": "3.0.2",
+        "io.branch.sdk": "2.1.7"
     }
 }

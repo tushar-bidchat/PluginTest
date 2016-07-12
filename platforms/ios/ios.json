@@ -83,6 +83,10 @@
                         {
                             "xml": "<feature name=\"ApplePay\"><param name=\"ios-package\" value=\"CDVApplePay\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BranchSDK\"><param name=\"ios-package\" value=\"BranchSDK\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -103,6 +107,10 @@
                         {
                             "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>bidchat</string></array></dict></array>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<array><dict><key>CFBundleURLName</key><string>io.branch.sdk</string><key>CFBundleURLSchemes</key><array><string>bidchat</string></array></dict></array>",
+                            "count": 1
                         }
                     ],
                     "NSLocationAlwaysUsageDescription": [
@@ -120,6 +128,12 @@
                     "ApplePayMerchant": [
                         {
                             "xml": "<string>merchant.com.bidchatapp.bidchat</string>",
+                            "count": 1
+                        }
+                    ],
+                    "branch_key": [
+                        {
+                            "xml": "<string>key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5</string>",
                             "count": 1
                         }
                     ]
@@ -202,6 +216,14 @@
         "cordova-plugin-applepay": {
             "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
             "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "io.branch.sdk": {
+            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
+            "URI_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -683,6 +705,20 @@
             "clobbers": [
                 "ApplePay"
             ]
+        },
+        {
+            "file": "plugins/es6-promise-plugin/www/promise.js",
+            "id": "es6-promise-plugin.Promise",
+            "pluginId": "es6-promise-plugin",
+            "runs": true
+        },
+        {
+            "file": "plugins/io.branch.sdk/www/branch.js",
+            "id": "io.branch.sdk.Branch",
+            "pluginId": "io.branch.sdk",
+            "clobbers": [
+                "Branch"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -706,6 +742,8 @@
         "cordova.plugins.diagnostic": "3.1.0",
         "ionic-plugin-keyboard": "2.2.1",
         "cordova-plugin-insomnia": "4.2.0",
-        "cordova-plugin-applepay": "0.0.1"
+        "cordova-plugin-applepay": "0.0.1",
+        "es6-promise-plugin": "3.0.2",
+        "io.branch.sdk": "2.1.7"
     }
 }

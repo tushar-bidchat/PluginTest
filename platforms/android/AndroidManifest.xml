@@ -20,12 +20,19 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:host=" " android:pathPrefix="/" android:scheme=" " />
             </intent-filter>
+            <intent-filter>
+                <data android:scheme="bidchat" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
         </activity>
         <receiver android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver">
             <intent-filter>
                 <action android:name="android.location.PROVIDERS_CHANGED" />
             </intent-filter>
         </receiver>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5" />
     </application>
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

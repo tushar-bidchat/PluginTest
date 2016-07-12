@@ -476,6 +476,20 @@ module.exports = [
         "clobbers": [
             "ApplePay"
         ]
+    },
+    {
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "id": "es6-promise-plugin.Promise",
+        "pluginId": "es6-promise-plugin",
+        "runs": true
+    },
+    {
+        "file": "plugins/io.branch.sdk/www/branch.js",
+        "id": "io.branch.sdk.Branch",
+        "pluginId": "io.branch.sdk",
+        "clobbers": [
+            "Branch"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -501,7 +515,9 @@ module.exports.metadata =
     "cordova.plugins.diagnostic": "3.1.0",
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-insomnia": "4.2.0",
-    "cordova-plugin-applepay": "0.0.1"
+    "cordova-plugin-applepay": "0.0.1",
+    "es6-promise-plugin": "3.0.2",
+    "io.branch.sdk": "2.1.7"
 }
 // BOTTOM OF METADATA
 });

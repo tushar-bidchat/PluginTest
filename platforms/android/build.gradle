@@ -243,6 +243,7 @@ dependencies {
     releaseCompile project(path: "CordovaLib", configuration: "release")
     compile "com.android.support:support-v4:23.+"
     compile "com.android.support:appcompat-v7:23.+"
+    compile "io.branch.sdk.android:library:1+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
