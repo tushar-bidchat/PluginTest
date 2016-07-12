@@ -28,6 +28,9 @@
         },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {
