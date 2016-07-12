@@ -126,6 +126,22 @@
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<receiver android:name=\"cordova.plugins.Diagnostic$LocationProviderChangedReceiver\"><intent-filter><action android:name=\"android.location.PROVIDERS_CHANGED\" /></intent-filter></receiver>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Diagnostic\"><param name=\"android-package\" value=\"cordova.plugins.Diagnostic\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -185,6 +201,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -568,6 +587,13 @@
         {
             "file": "plugins/cordova-plugin-x-toast/test/tests.js",
             "id": "cordova-plugin-x-toast.tests"
+        },
+        {
+            "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
+            "id": "cordova.plugins.diagnostic.Diagnostic",
+            "clobbers": [
+                "cordova.plugins.diagnostic"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -587,6 +613,7 @@
         "cordova-plugin-network-information": "1.2.1",
         "cordova-plugin-screen-orientation": "1.4.2",
         "cordova-plugin-vibration": "2.1.1",
-        "cordova-plugin-x-toast": "2.5.2"
+        "cordova-plugin-x-toast": "2.5.2",
+        "cordova.plugins.diagnostic": "3.1.0"
     }
 }

@@ -46,6 +46,11 @@
 		FF8935937D42493AA42133E1 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3CE7CE62A4DD7989E4B86 /* Toast+UIView.m */; };
 		8E6B3DA75131411C9A1BB132 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E932483AE544EBB114A943 /* Toast.m */; };
 		B94311D3A390475691C7A97F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07665882BD642C2A0E044ED /* QuartzCore.framework */; };
+		B3E6243541EA424AACAD158A /* Diagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD5ADE153B74172A244B1CD /* Diagnostic.m */; };
+		9E678E2E9DAF4E73AA75228D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223D82C01DF045F4985302D5 /* CoreBluetooth.framework */; };
+		F64EFB50B2D14882B19AF25A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D873AE618A441096F6E1E3 /* Photos.framework */; };
+		A88F732EF6F344998B9B97B0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C59F698FC86440FA97239FA /* AddressBook.framework */; };
+		37E25D262C614031B8E157C2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +143,12 @@
 		E89A2B3183EC4ACE8C61FD43 /* Toast+UIView.h */ = {isa = PBXFileReference; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		13B0AA10DEDE43059FBFB93C /* Toast.h */ = {isa = PBXFileReference; name = "Toast.h"; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		B07665882BD642C2A0E044ED /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		ACD5ADE153B74172A244B1CD /* Diagnostic.m */ = {isa = PBXFileReference; name = "Diagnostic.m"; path = "cordova.plugins.diagnostic/Diagnostic.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		29AE3553DA46421D91F32F97 /* Diagnostic.h */ = {isa = PBXFileReference; name = "Diagnostic.h"; path = "cordova.plugins.diagnostic/Diagnostic.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		223D82C01DF045F4985302D5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		46D873AE618A441096F6E1E3 /* Photos.framework */ = {isa = PBXFileReference; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7C59F698FC86440FA97239FA /* AddressBook.framework */ = {isa = PBXFileReference; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */ = {isa = PBXFileReference; name = "EventKit.framework"; path = "System/Library/Frameworks/EventKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +165,10 @@
 				164076FB9F2A41C8A75A49D4 /* SystemConfiguration.framework in Frameworks */,
 				840A7BBA78CD4084949D8300 /* CoreTelephony.framework in Frameworks */,
 				B94311D3A390475691C7A97F /* QuartzCore.framework in Frameworks */,
+				9E678E2E9DAF4E73AA75228D /* CoreBluetooth.framework in Frameworks */,
+				F64EFB50B2D14882B19AF25A /* Photos.framework in Frameworks */,
+				A88F732EF6F344998B9B97B0 /* AddressBook.framework in Frameworks */,
+				37E25D262C614031B8E157C2 /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +248,10 @@
 				C9A4B1D6E6574DEFB4C120E6 /* SystemConfiguration.framework */,
 				0D72E8ED105B47E789232EC2 /* CoreTelephony.framework */,
 				B07665882BD642C2A0E044ED /* QuartzCore.framework */,
+				223D82C01DF045F4985302D5 /* CoreBluetooth.framework */,
+				46D873AE618A441096F6E1E3 /* Photos.framework */,
+				7C59F698FC86440FA97239FA /* AddressBook.framework */,
+				14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,6 +320,8 @@
 				30E932483AE544EBB114A943 /* Toast.m */,
 				E89A2B3183EC4ACE8C61FD43 /* Toast+UIView.h */,
 				13B0AA10DEDE43059FBFB93C /* Toast.h */,
+				ACD5ADE153B74172A244B1CD /* Diagnostic.m */,
+				29AE3553DA46421D91F32F97 /* Diagnostic.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -446,6 +467,7 @@
 				116B6F0847C342B3A0C3A54A /* CDVVibration.m in Sources */,
 				FF8935937D42493AA42133E1 /* Toast+UIView.m in Sources */,
 				8E6B3DA75131411C9A1BB132 /* Toast.m in Sources */,
+				B3E6243541EA424AACAD158A /* Diagnostic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

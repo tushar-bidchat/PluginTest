@@ -40,7 +40,7 @@
       <true/>
     </dict>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string/>
+    <string>This app will now only track your location when the screen is on and the app is displayed.</string>
     <key>CFBundleURLTypes</key>
     <array>
       <dict>
@@ -50,5 +50,7 @@
         </array>
       </dict>
     </array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>This app requires constant access to your location in order to track your position, even when the screen is off.</string>
   </dict>
 </plist>

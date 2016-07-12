@@ -443,6 +443,14 @@ module.exports = [
         "file": "plugins/cordova-plugin-x-toast/test/tests.js",
         "id": "cordova-plugin-x-toast.tests",
         "pluginId": "cordova-plugin-x-toast"
+    },
+    {
+        "file": "plugins/cordova.plugins.diagnostic/www/ios/diagnostic.js",
+        "id": "cordova.plugins.diagnostic.Diagnostic",
+        "pluginId": "cordova.plugins.diagnostic",
+        "clobbers": [
+            "cordova.plugins.diagnostic"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -464,7 +472,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.2.1",
     "cordova-plugin-screen-orientation": "1.4.2",
     "cordova-plugin-vibration": "2.1.1",
-    "cordova-plugin-x-toast": "2.5.2"
+    "cordova-plugin-x-toast": "2.5.2",
+    "cordova.plugins.diagnostic": "3.1.0"
 }
 // BOTTOM OF METADATA
 });
