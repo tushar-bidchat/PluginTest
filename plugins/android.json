@@ -80,6 +80,9 @@
         },
         "cordova-plugin-add-swift-support": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "com.paypal.cordova.mobilesdk": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {
@@ -87,6 +90,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "card.io.cordova.mobilesdk": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     }

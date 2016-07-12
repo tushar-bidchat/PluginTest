@@ -73,6 +73,12 @@
     <feature name="BranchSDK">
         <param name="ios-package" value="BranchSDK" />
     </feature>
+    <feature name="CardIO">
+        <param name="ios-package" onload="false" value="CardIOCordovaPlugin" />
+    </feature>
+    <feature name="PayPalMobile">
+        <param name="ios-package" onload="true" value="PayPalMobileCordovaPlugin" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -91,7 +97,6 @@
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
-    <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="false" />
     <preference name="EnableViewportScale" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
@@ -104,4 +109,5 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
+    <preference name="BackupWebStorage" value="none" />
 </widget>
