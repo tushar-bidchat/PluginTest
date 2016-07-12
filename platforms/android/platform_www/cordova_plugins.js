@@ -367,6 +367,17 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+        "id": "cordova-plugin-x-toast.Toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+        "id": "cordova-plugin-x-toast.tests"
     }
 ];
 module.exports.metadata = 
@@ -387,7 +398,8 @@ module.exports.metadata =
     "cordova-plugin-media-capture": "1.3.0",
     "cordova-plugin-network-information": "1.2.1",
     "cordova-plugin-screen-orientation": "1.4.2",
-    "cordova-plugin-vibration": "2.1.1"
+    "cordova-plugin-vibration": "2.1.1",
+    "cordova-plugin-x-toast": "2.5.2"
 };
 // BOTTOM OF METADATA
 });

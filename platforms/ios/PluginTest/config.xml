@@ -55,6 +55,9 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

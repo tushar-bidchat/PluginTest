@@ -43,6 +43,9 @@
 		30B089813EA84E14839A5897 /* YoikScreenOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F83CF4F6CF496EB6C08679 /* YoikScreenOrientation.m */; };
 		26C6C1C1739440A2921752B5 /* CDVViewController+UpdateSupportedOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = DF53E0BECCD1473A9031A7E6 /* CDVViewController+UpdateSupportedOrientations.m */; };
 		116B6F0847C342B3A0C3A54A /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 549C14B4A9D64443A99CD012 /* CDVVibration.m */; };
+		FF8935937D42493AA42133E1 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3CE7CE62A4DD7989E4B86 /* Toast+UIView.m */; };
+		8E6B3DA75131411C9A1BB132 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E932483AE544EBB114A943 /* Toast.m */; };
+		B94311D3A390475691C7A97F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07665882BD642C2A0E044ED /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,11 @@
 		E9585CCB2A724F458FC17310 /* CDVViewController+UpdateSupportedOrientations.h */ = {isa = PBXFileReference; name = "CDVViewController+UpdateSupportedOrientations.h"; path = "cordova-plugin-screen-orientation/CDVViewController+UpdateSupportedOrientations.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		549C14B4A9D64443A99CD012 /* CDVVibration.m */ = {isa = PBXFileReference; name = "CDVVibration.m"; path = "cordova-plugin-vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		5BCEF705F4D7434EBDCA5C9B /* CDVVibration.h */ = {isa = PBXFileReference; name = "CDVVibration.h"; path = "cordova-plugin-vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		29C3CE7CE62A4DD7989E4B86 /* Toast+UIView.m */ = {isa = PBXFileReference; name = "Toast+UIView.m"; path = "cordova-plugin-x-toast/Toast+UIView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		30E932483AE544EBB114A943 /* Toast.m */ = {isa = PBXFileReference; name = "Toast.m"; path = "cordova-plugin-x-toast/Toast.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E89A2B3183EC4ACE8C61FD43 /* Toast+UIView.h */ = {isa = PBXFileReference; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		13B0AA10DEDE43059FBFB93C /* Toast.h */ = {isa = PBXFileReference; name = "Toast.h"; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B07665882BD642C2A0E044ED /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,7 @@
 				C1F06DBE49644777B65D6DAF /* AudioToolbox.framework in Frameworks */,
 				164076FB9F2A41C8A75A49D4 /* SystemConfiguration.framework in Frameworks */,
 				840A7BBA78CD4084949D8300 /* CoreTelephony.framework in Frameworks */,
+				B94311D3A390475691C7A97F /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +232,7 @@
 				E3DCB2F0FBD542E58688A3C8 /* AudioToolbox.framework */,
 				C9A4B1D6E6574DEFB4C120E6 /* SystemConfiguration.framework */,
 				0D72E8ED105B47E789232EC2 /* CoreTelephony.framework */,
+				B07665882BD642C2A0E044ED /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,6 +297,10 @@
 				E9585CCB2A724F458FC17310 /* CDVViewController+UpdateSupportedOrientations.h */,
 				549C14B4A9D64443A99CD012 /* CDVVibration.m */,
 				5BCEF705F4D7434EBDCA5C9B /* CDVVibration.h */,
+				29C3CE7CE62A4DD7989E4B86 /* Toast+UIView.m */,
+				30E932483AE544EBB114A943 /* Toast.m */,
+				E89A2B3183EC4ACE8C61FD43 /* Toast+UIView.h */,
+				13B0AA10DEDE43059FBFB93C /* Toast.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -430,6 +444,8 @@
 				30B089813EA84E14839A5897 /* YoikScreenOrientation.m in Sources */,
 				26C6C1C1739440A2921752B5 /* CDVViewController+UpdateSupportedOrientations.m in Sources */,
 				116B6F0847C342B3A0C3A54A /* CDVVibration.m in Sources */,
+				FF8935937D42493AA42133E1 /* Toast+UIView.m in Sources */,
+				8E6B3DA75131411C9A1BB132 /* Toast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
