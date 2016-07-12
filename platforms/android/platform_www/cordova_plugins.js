@@ -76,6 +76,20 @@ module.exports = [
         "clobbers": [
             "navigator.compass"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+        "id": "cordova-plugin-dialogs.notification_android",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -87,7 +101,8 @@ module.exports.metadata =
     "cordova-plugin-customurlscheme": "4.2.0",
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-device-motion": "1.2.1",
-    "cordova-plugin-device-orientation": "1.0.4-dev"
+    "cordova-plugin-device-orientation": "1.0.4-dev",
+    "cordova-plugin-dialogs": "1.2.1"
 };
 // BOTTOM OF METADATA
 });
