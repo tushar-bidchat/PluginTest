@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"ios-package\" value=\"CDVCompass\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -63,6 +67,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -131,6 +138,30 @@
             "clobbers": [
                 "navigator.accelerometer"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+            "id": "cordova-plugin-device-orientation.CompassError",
+            "pluginId": "cordova-plugin-device-orientation",
+            "clobbers": [
+                "CompassError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+            "id": "cordova-plugin-device-orientation.CompassHeading",
+            "pluginId": "cordova-plugin-device-orientation",
+            "clobbers": [
+                "CompassHeading"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+            "id": "cordova-plugin-device-orientation.compass",
+            "pluginId": "cordova-plugin-device-orientation",
+            "clobbers": [
+                "navigator.compass"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -139,6 +170,7 @@
         "cordova-plugin-camera": "2.2.0",
         "cordova-plugin-customurlscheme": "4.2.0",
         "cordova-plugin-device": "1.1.2",
-        "cordova-plugin-device-motion": "1.2.1"
+        "cordova-plugin-device-motion": "1.2.1",
+        "cordova-plugin-device-orientation": "1.0.4-dev"
     }
 }

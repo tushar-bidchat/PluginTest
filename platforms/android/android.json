@@ -27,6 +27,10 @@
                         {
                             "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -36,6 +40,14 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         }
                     ],
@@ -74,6 +86,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -134,6 +149,27 @@
             "clobbers": [
                 "navigator.accelerometer"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+            "id": "cordova-plugin-device-orientation.CompassError",
+            "clobbers": [
+                "CompassError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+            "id": "cordova-plugin-device-orientation.CompassHeading",
+            "clobbers": [
+                "CompassHeading"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+            "id": "cordova-plugin-device-orientation.compass",
+            "clobbers": [
+                "navigator.compass"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -142,6 +178,7 @@
         "cordova-plugin-camera": "2.2.0",
         "cordova-plugin-customurlscheme": "4.2.0",
         "cordova-plugin-device": "1.1.2",
-        "cordova-plugin-device-motion": "1.2.1"
+        "cordova-plugin-device-motion": "1.2.1",
+        "cordova-plugin-device-orientation": "1.0.4-dev"
     }
 }

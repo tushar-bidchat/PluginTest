@@ -49,5 +49,14 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-device-orientation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-plugin-device-orientation.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
