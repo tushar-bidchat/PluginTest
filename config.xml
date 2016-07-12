@@ -24,4 +24,12 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <preference name="BackupWebStorage" value="none" />
+    <preference name="analytics_write_key" value="eBqPrkMxNcBIb8Sw6ne98rpsiVYWBCAL" />
+    <preference name="analytics_debug_write_key" value="eBqPrkMxNcBIb8Sw6ne98rpsiVYWBCAL" />
+    <branch-config>
+        <ios-team-id value="3R8NJ8ABKK" />
+        <android-prefix value="/X9Ug" />
+        <host name="bnc.lt" scheme="https" />
+    </branch-config>
+
 </widget>

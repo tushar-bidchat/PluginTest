@@ -95,6 +95,18 @@
                         {
                             "xml": "<feature name=\"PayPalMobile\"><param name=\"ios-package\" onload=\"true\" value=\"PayPalMobileCordovaPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AnalyticsPlugin\"><param name=\"ios-package\" value=\"AnalyticsPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"analytics_write_key\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"analytics_debug_write_key\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -241,6 +253,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "com.paypal.cordova.mobilesdk": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-segment": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -752,6 +767,14 @@
             "clobbers": [
                 "PayPalMobile"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-segment/www/analytics.js",
+            "id": "cordova-plugin-segment.analytics",
+            "pluginId": "cordova-plugin-segment",
+            "clobbers": [
+                "analytics"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -780,6 +803,7 @@
         "io.branch.sdk": "2.1.7",
         "cordova-plugin-add-swift-support": "1.3.1",
         "card.io.cordova.mobilesdk": "2.0.2",
-        "com.paypal.cordova.mobilesdk": "3.2.2"
+        "com.paypal.cordova.mobilesdk": "3.2.2",
+        "cordova-plugin-segment": "0.0.2"
     }
 }

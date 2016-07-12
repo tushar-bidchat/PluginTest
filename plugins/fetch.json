@@ -224,5 +224,14 @@
         },
         "is_top_level": false,
         "variables": {}
+    },
+    "cordova-plugin-segment": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/monove/cordova-plugin-segment",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

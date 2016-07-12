@@ -79,6 +79,12 @@
     <feature name="PayPalMobile">
         <param name="ios-package" onload="true" value="PayPalMobileCordovaPlugin" />
     </feature>
+    <feature name="AnalyticsPlugin">
+        <param name="ios-package" value="AnalyticsPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <preference name="analytics_write_key" />
+    <preference name="analytics_debug_write_key" />
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -94,9 +100,15 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <branch-config>
+        <ios-team-id value="3R8NJ8ABKK" />
+        <android-prefix value="/X9Ug" />
+        <host name="bnc.lt" scheme="https" />
+    </branch-config>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="false" />
     <preference name="EnableViewportScale" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
@@ -109,5 +121,6 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
-    <preference name="BackupWebStorage" value="none" />
+    <preference name="analytics_write_key" value="eBqPrkMxNcBIb8Sw6ne98rpsiVYWBCAL" />
+    <preference name="analytics_debug_write_key" value="eBqPrkMxNcBIb8Sw6ne98rpsiVYWBCAL" />
 </widget>

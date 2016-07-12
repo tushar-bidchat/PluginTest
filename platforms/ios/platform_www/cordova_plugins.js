@@ -506,6 +506,14 @@ module.exports = [
         "clobbers": [
             "PayPalMobile"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-segment/www/analytics.js",
+        "id": "cordova-plugin-segment.analytics",
+        "pluginId": "cordova-plugin-segment",
+        "clobbers": [
+            "analytics"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -536,7 +544,8 @@ module.exports.metadata =
     "io.branch.sdk": "2.1.7",
     "cordova-plugin-add-swift-support": "1.3.1",
     "card.io.cordova.mobilesdk": "2.0.2",
-    "com.paypal.cordova.mobilesdk": "3.2.2"
+    "com.paypal.cordova.mobilesdk": "3.2.2",
+    "cordova-plugin-segment": "0.0.2"
 }
 // BOTTOM OF METADATA
 });
