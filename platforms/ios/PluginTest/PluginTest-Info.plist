@@ -36,6 +36,25 @@
     <true/>
     <key>NSAppTransportSecurity</key>
     <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>m.facebook.com</key>
+        <dict/>
+        <key>graph.facebook.com</key>
+        <dict/>
+        <key>api.facebook.com</key>
+        <dict/>
+        <key>fbcdn.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+      </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
@@ -57,6 +76,12 @@
           <string>bidchat</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb1643392872598880</string>
+        </array>
+      </dict>
     </array>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>This app requires constant access to your location in order to track your position, even when the screen is off.</string>
@@ -66,5 +91,16 @@
     <string>merchant.com.bidchatapp.bidchat</string>
     <key>branch_key</key>
     <string>key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5</string>
+    <key>FacebookAppID</key>
+    <string>1643392872598880</string>
+    <key>FacebookDisplayName</key>
+    <string>Bidchat</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+    </array>
   </dict>
 </plist>

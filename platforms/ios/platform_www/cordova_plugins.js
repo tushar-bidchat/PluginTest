@@ -514,6 +514,14 @@ module.exports = [
         "clobbers": [
             "analytics"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "pluginId": "cordova-plugin-facebook4",
+        "clobbers": [
+            "facebookConnectPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -545,7 +553,8 @@ module.exports.metadata =
     "cordova-plugin-add-swift-support": "1.3.1",
     "card.io.cordova.mobilesdk": "2.0.2",
     "com.paypal.cordova.mobilesdk": "3.2.2",
-    "cordova-plugin-segment": "0.0.2"
+    "cordova-plugin-segment": "0.0.2",
+    "cordova-plugin-facebook4": "1.7.1"
 }
 // BOTTOM OF METADATA
 });

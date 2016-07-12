@@ -86,6 +86,11 @@
         },
         "cordova-plugin-segment": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1643392872598880",
+            "APP_NAME": "Bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {

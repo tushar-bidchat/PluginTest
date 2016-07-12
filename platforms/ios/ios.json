@@ -107,6 +107,34 @@
                         {
                             "xml": "<preference name=\"analytics_debug_write_key\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<plugin name=\"FacebookConnectPlugin\" value=\"FacebookConnectPlugin\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -131,6 +159,10 @@
                         {
                             "xml": "<array><dict><key>CFBundleURLName</key><string>io.branch.sdk</string><key>CFBundleURLSchemes</key><array><string>bidchat</string></array></dict></array>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb1643392872598880</string></array></dict></array>",
+                            "count": 1
                         }
                     ],
                     "NSLocationAlwaysUsageDescription": [
@@ -154,6 +186,30 @@
                     "branch_key": [
                         {
                             "xml": "<string>key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5</string>",
+                            "count": 1
+                        }
+                    ],
+                    "FacebookAppID": [
+                        {
+                            "xml": "<string>1643392872598880</string>",
+                            "count": 1
+                        }
+                    ],
+                    "FacebookDisplayName": [
+                        {
+                            "xml": "<string>Bidchat</string>",
+                            "count": 1
+                        }
+                    ],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSExceptionDomains</key><dict><key>facebook.com</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>fbcdn.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>akamaihd.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict></dict></dict>",
+                            "count": 1
+                        }
+                    ],
+                    "LSApplicationQueriesSchemes": [
+                        {
+                            "xml": "<array><string>fbapi</string><string>fb-messenger-api</string><string>fbauth2</string><string>fbshareextension</string></array>",
                             "count": 1
                         }
                     ]
@@ -256,6 +312,11 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-segment": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1643392872598880",
+            "APP_NAME": "Bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -775,6 +836,14 @@
             "clobbers": [
                 "analytics"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+            "pluginId": "cordova-plugin-facebook4",
+            "clobbers": [
+                "facebookConnectPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -804,6 +873,7 @@
         "cordova-plugin-add-swift-support": "1.3.1",
         "card.io.cordova.mobilesdk": "2.0.2",
         "com.paypal.cordova.mobilesdk": "3.2.2",
-        "cordova-plugin-segment": "0.0.2"
+        "cordova-plugin-segment": "0.0.2",
+        "cordova-plugin-facebook4": "1.7.1"
     }
 }

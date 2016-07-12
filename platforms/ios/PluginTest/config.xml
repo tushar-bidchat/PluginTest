@@ -85,6 +85,16 @@
     </feature>
     <preference name="analytics_write_key" />
     <preference name="analytics_debug_write_key" />
+    <feature name="FacebookConnectPlugin">
+        <param name="ios-package" value="FacebookConnectPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <plugin name="FacebookConnectPlugin" value="FacebookConnectPlugin" />
+    <access origin="https://m.facebook.com" />
+    <access origin="https://graph.facebook.com" />
+    <access origin="https://api.facebook.com" />
+    <access origin="https://*.fbcdn.net" />
+    <access origin="https://*.akamaihd.net" />
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -108,7 +118,6 @@
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
-    <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="false" />
     <preference name="EnableViewportScale" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
@@ -121,6 +130,7 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
+    <preference name="BackupWebStorage" value="none" />
     <preference name="analytics_write_key" value="eBqPrkMxNcBIb8Sw6ne98rpsiVYWBCAL" />
     <preference name="analytics_debug_write_key" value="eBqPrkMxNcBIb8Sw6ne98rpsiVYWBCAL" />
 </widget>
