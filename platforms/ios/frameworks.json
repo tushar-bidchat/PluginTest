@@ -9,6 +9,9 @@
     "QuartzCore.framework": 1,
     "CoreBluetooth.framework": 1,
     "Photos.framework": 1,
-    "AddressBook.framework": 1,
-    "EventKit.framework": 1
+    "AddressBook.framework": 2,
+    "EventKit.framework": 1,
+    "PassKit.framework": 1,
+    "Foundation.framework": 1,
+    "Security.framework": 1
 }

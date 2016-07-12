@@ -64,6 +64,11 @@
         },
         "cordova-plugin-insomnia": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-applepay": {
+            "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
+            "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {

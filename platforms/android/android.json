@@ -219,6 +219,11 @@
         },
         "cordova-plugin-insomnia": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-applepay": {
+            "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
+            "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {},
@@ -645,6 +650,7 @@
         "cordova-plugin-x-toast": "2.5.2",
         "cordova.plugins.diagnostic": "3.1.0",
         "ionic-plugin-keyboard": "2.2.1",
-        "cordova-plugin-insomnia": "4.2.0"
+        "cordova-plugin-insomnia": "4.2.0",
+        "cordova-plugin-applepay": "0.0.1"
     }
 }

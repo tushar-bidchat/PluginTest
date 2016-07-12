@@ -67,6 +67,9 @@
     <feature name="Insomnia">
         <param name="ios-package" value="Insomnia" />
     </feature>
+    <feature name="ApplePay">
+        <param name="ios-package" value="CDVApplePay" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

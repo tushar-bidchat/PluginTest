@@ -468,6 +468,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.insomnia"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-applepay/www/applepay.js",
+        "id": "cordova-plugin-applepay.applepay",
+        "pluginId": "cordova-plugin-applepay",
+        "clobbers": [
+            "ApplePay"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -492,7 +500,8 @@ module.exports.metadata =
     "cordova-plugin-x-toast": "2.5.2",
     "cordova.plugins.diagnostic": "3.1.0",
     "ionic-plugin-keyboard": "2.2.1",
-    "cordova-plugin-insomnia": "4.2.0"
+    "cordova-plugin-insomnia": "4.2.0",
+    "cordova-plugin-applepay": "0.0.1"
 }
 // BOTTOM OF METADATA
 });

@@ -53,6 +53,11 @@
 		37E25D262C614031B8E157C2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */; };
 		B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35182D10CF491AB903A8CC /* IonicKeyboard.m */; };
 		0B7AF55BE43649B9A9BDF33C /* Insomnia.m in Sources */ = {isa = PBXBuildFile; fileRef = AED873B19B244A23B48EAC27 /* Insomnia.m */; };
+		FAE69A7B245B4554A7F795B8 /* CDVApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = F735A175C2414B0AB92ED280 /* CDVApplePay.m */; };
+		9AF12FB4D4FA468D8ED8B18D /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8130F01759C2436CBD5B95AA /* Stripe.framework */; };
+		BF33835BF7F44E8FBD125897 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC8C7FE8354889A0371179 /* PassKit.framework */; };
+		9D6F05A4D01C428A92AFF345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D44EB5035C437BA34E8C1F /* Foundation.framework */; };
+		756EEE29A9F34F0BA59540FC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9E2A861AC74F78AD04C3AD /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +160,12 @@
 		F07E0C9280394BDC979F2D95 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		AED873B19B244A23B48EAC27 /* Insomnia.m */ = {isa = PBXFileReference; name = "Insomnia.m"; path = "cordova-plugin-insomnia/Insomnia.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		800640EC36F943D29FDA6DB3 /* Insomnia.h */ = {isa = PBXFileReference; name = "Insomnia.h"; path = "cordova-plugin-insomnia/Insomnia.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F735A175C2414B0AB92ED280 /* CDVApplePay.m */ = {isa = PBXFileReference; name = "CDVApplePay.m"; path = "cordova-plugin-applepay/CDVApplePay.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		26DE2F6CF74247ECB3FAE37A /* CDVApplePay.h */ = {isa = PBXFileReference; name = "CDVApplePay.h"; path = "cordova-plugin-applepay/CDVApplePay.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8130F01759C2436CBD5B95AA /* Stripe.framework */ = {isa = PBXFileReference; name = "Stripe.framework"; path = "PluginTest/Plugins/cordova-plugin-applepay/Stripe.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B2EC8C7FE8354889A0371179 /* PassKit.framework */ = {isa = PBXFileReference; name = "PassKit.framework"; path = "System/Library/Frameworks/PassKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		54D44EB5035C437BA34E8C1F /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		AE9E2A861AC74F78AD04C3AD /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +186,10 @@
 				F64EFB50B2D14882B19AF25A /* Photos.framework in Frameworks */,
 				A88F732EF6F344998B9B97B0 /* AddressBook.framework in Frameworks */,
 				37E25D262C614031B8E157C2 /* EventKit.framework in Frameworks */,
+				9AF12FB4D4FA468D8ED8B18D /* Stripe.framework in Frameworks */,
+				BF33835BF7F44E8FBD125897 /* PassKit.framework in Frameworks */,
+				9D6F05A4D01C428A92AFF345 /* Foundation.framework in Frameworks */,
+				756EEE29A9F34F0BA59540FC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +273,10 @@
 				46D873AE618A441096F6E1E3 /* Photos.framework */,
 				7C59F698FC86440FA97239FA /* AddressBook.framework */,
 				14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */,
+				8130F01759C2436CBD5B95AA /* Stripe.framework */,
+				B2EC8C7FE8354889A0371179 /* PassKit.framework */,
+				54D44EB5035C437BA34E8C1F /* Foundation.framework */,
+				AE9E2A861AC74F78AD04C3AD /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,6 +351,8 @@
 				F07E0C9280394BDC979F2D95 /* IonicKeyboard.h */,
 				AED873B19B244A23B48EAC27 /* Insomnia.m */,
 				800640EC36F943D29FDA6DB3 /* Insomnia.h */,
+				F735A175C2414B0AB92ED280 /* CDVApplePay.m */,
+				26DE2F6CF74247ECB3FAE37A /* CDVApplePay.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -480,6 +501,7 @@
 				B3E6243541EA424AACAD158A /* Diagnostic.m in Sources */,
 				B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */,
 				0B7AF55BE43649B9A9BDF33C /* Insomnia.m in Sources */,
+				FAE69A7B245B4554A7F795B8 /* CDVApplePay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +538,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = PluginTest;
 				PROVISIONING_PROFILE = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"PluginTest/Plugins/cordova-plugin-applepay\"",
+				);
 			};
 			name = Debug;
 		};
@@ -538,6 +564,10 @@
 				INFOPLIST_FILE = "PluginTest/PluginTest-Info.plist";
 				PRODUCT_NAME = PluginTest;
 				PROVISIONING_PROFILE = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"PluginTest/Plugins/cordova-plugin-applepay\"",
+				);
 			};
 			name = Release;
 		};

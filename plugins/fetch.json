@@ -166,5 +166,17 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-applepay": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-plugin-applepay.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "STRIPE_PUBLISHABLE_KEY": "pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt",
+            "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat"
+        }
     }
 }
