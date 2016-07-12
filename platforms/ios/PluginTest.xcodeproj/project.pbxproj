@@ -52,6 +52,7 @@
 		A88F732EF6F344998B9B97B0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C59F698FC86440FA97239FA /* AddressBook.framework */; };
 		37E25D262C614031B8E157C2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */; };
 		B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35182D10CF491AB903A8CC /* IonicKeyboard.m */; };
+		0B7AF55BE43649B9A9BDF33C /* Insomnia.m in Sources */ = {isa = PBXBuildFile; fileRef = AED873B19B244A23B48EAC27 /* Insomnia.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		14069DEBD21E4ECAAAD7B1A3 /* EventKit.framework */ = {isa = PBXFileReference; name = "EventKit.framework"; path = "System/Library/Frameworks/EventKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		8D35182D10CF491AB903A8CC /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		F07E0C9280394BDC979F2D95 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AED873B19B244A23B48EAC27 /* Insomnia.m */ = {isa = PBXFileReference; name = "Insomnia.m"; path = "cordova-plugin-insomnia/Insomnia.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		800640EC36F943D29FDA6DB3 /* Insomnia.h */ = {isa = PBXFileReference; name = "Insomnia.h"; path = "cordova-plugin-insomnia/Insomnia.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +330,8 @@
 				29AE3553DA46421D91F32F97 /* Diagnostic.h */,
 				8D35182D10CF491AB903A8CC /* IonicKeyboard.m */,
 				F07E0C9280394BDC979F2D95 /* IonicKeyboard.h */,
+				AED873B19B244A23B48EAC27 /* Insomnia.m */,
+				800640EC36F943D29FDA6DB3 /* Insomnia.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -474,6 +479,7 @@
 				8E6B3DA75131411C9A1BB132 /* Toast.m in Sources */,
 				B3E6243541EA424AACAD158A /* Diagnostic.m in Sources */,
 				B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */,
+				0B7AF55BE43649B9A9BDF33C /* Insomnia.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
