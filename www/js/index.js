@@ -29,7 +29,9 @@ function buttonOneClicked() {
     
     // showCurrentGeoLocation();
     
-    showIsWifiAvailable();
+//    showIsWifiAvailable();
+    
+    isAuthorizedForContacts();
 }
 
 function showInformationMessage(message) {
@@ -57,6 +59,18 @@ function showIsWifiAvailable() {
     }
     
     cordova.plugins.diagnostic.isWifiAvailable(onSuccess, onError);
+}
+
+
+function isAuthorizedForContacts() {
+    cordova.plugins.diagnostic.isContactsAuthorized(
+        function(authorized){
+            alert("App has " + (authorized ? "authorized" : "denied") + " access to contacts");
+        }, 
+        function(error){
+            alert("The following error occurred: "+error);
+        }
+    );
 }
 
 function showCurrentGeoLocation () {
