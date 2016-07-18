@@ -55,13 +55,15 @@
 		9D4A288D6DF94666A38EC874 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FEEC31F89749D0AFC958F4 /* libCardIO.a */; };
 		9D6F05A4D01C428A92AFF345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D44EB5035C437BA34E8C1F /* Foundation.framework */; };
 		9E678E2E9DAF4E73AA75228D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223D82C01DF045F4985302D5 /* CoreBluetooth.framework */; };
+		A11C19A76D2C4EC99A867B05 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B8E88D28494993A4CFC15A /* Bolts.framework */; };
+		A61AAA8595254E2596DD2406 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590304EEEA704F6FA6101B18 /* FBSDKShareKit.framework */; };
 		A88F732EF6F344998B9B97B0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C59F698FC86440FA97239FA /* AddressBook.framework */; };
 		AA732CEAD0B54CCFA6616022 /* BranchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B9E438BC4B25A61131F3 /* BranchSDK.m */; };
 		AC6B7C7E242B4BB0A1337E73 /* Branch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526BFD056F742C7B11E1247 /* Branch.framework */; };
 		B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35182D10CF491AB903A8CC /* IonicKeyboard.m */; };
-		B3E6243541EA424AACAD158A /* Diagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD5ADE153B74172A244B1CD /* Diagnostic.m */; };
 		B94311D3A390475691C7A97F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07665882BD642C2A0E044ED /* QuartzCore.framework */; };
 		BAD1C9881F4E43DC9FD096ED /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F9BA0C080A4A918110AFBC /* libopencv_imgproc.a */; };
+		BBD7190BFED24971A224B072 /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2900ED3EAB49B68C29872E /* FacebookConnectPlugin.m */; };
 		BE08EA5FB4BF44DEB35F2656 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D7B330ACE64FE4B43B5EEF /* CDVAssetLibraryFilesystem.m */; };
 		BEE535768ADD470AB5ACE662 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C53ED03704A7391D433E0 /* Accelerate.framework */; };
 		BF33835BF7F44E8FBD125897 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC8C7FE8354889A0371179 /* PassKit.framework */; };
@@ -69,10 +71,12 @@
 		C65248896BDA46058A790379 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B86F07F0234B12B59374D8 /* AVFoundation.framework */; };
 		CF40FFBECA1148E2BB858D6E /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E5233E29114591AC74CB37 /* CDVLocalFilesystem.m */; };
 		D482634F8DFA49CEA4387FA4 /* CDVCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1552A2E61601413F9BD7E956 /* CDVCapture.m */; };
+		D59B938458814D4B912043F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FDA124533740EAAA232E67 /* FBSDKLoginKit.framework */; };
 		D759FC4B397340A0B77833C5 /* PluginTest.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 6809E237A27448FBA0C9EEB3 /* PluginTest.entitlements */; };
 		E30B0380C8094D0E8841B975 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BA1531DB7149E1B1B51788 /* libPayPalMobile.a */; };
 		E39295A93E4F4CDC81BC3AFE /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 384D0F42CE5146BC931BDA1B /* CDVNotification.m */; };
 		E7AA96B6024A4E64BE880D94 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD98C8091424EEFA76F2104 /* CDVReachability.m */; };
+		EA79F3DAA84D4647AAFE079A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219C27717181449A920487A9 /* FBSDKCoreKit.framework */; };
 		F1FCBA46AA8E4E999F38E46C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85A78F4360C47E8958C5D3B /* OpenGLES.framework */; };
 		F64EFB50B2D14882B19AF25A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D873AE618A441096F6E1E3 /* Photos.framework */; };
 		F7149DF71F974FAB822E2603 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 10062A15E7364C85905EE17B /* CDVCamera.m */; };
@@ -80,11 +84,7 @@
 		FAE69A7B245B4554A7F795B8 /* CDVApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = F735A175C2414B0AB92ED280 /* CDVApplePay.m */; };
 		FE36153ECD3A4CCA9AC1B15A /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE1D2446B44D7781C35AEF /* CDVFile.m */; };
 		FF8935937D42493AA42133E1 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3CE7CE62A4DD7989E4B86 /* Toast+UIView.m */; };
-		BBD7190BFED24971A224B072 /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2900ED3EAB49B68C29872E /* FacebookConnectPlugin.m */; };
-		A11C19A76D2C4EC99A867B05 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B8E88D28494993A4CFC15A /* Bolts.framework */; };
-		EA79F3DAA84D4647AAFE079A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219C27717181449A920487A9 /* FBSDKCoreKit.framework */; };
-		D59B938458814D4B912043F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FDA124533740EAAA232E67 /* FBSDKLoginKit.framework */; };
-		A61AAA8595254E2596DD2406 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590304EEEA704F6FA6101B18 /* FBSDKShareKit.framework */; };
+		561055BD41C5417B9541CA7E /* Diagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCA6A527B54E88905D9505 /* Diagnostic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,13 +127,13 @@
 		1E71CEDF423B4DA69BC3DC3E /* CFNetwork.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1EBC2345D569420797865D67 /* SEGScreenPayload.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = SEGScreenPayload.h; path = "cordova-plugin-segment/SEGScreenPayload.h"; sourceTree = "<group>"; };
 		20D422A70AC44BD4BA95345A /* SEGAnalyticsUtils.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = SEGAnalyticsUtils.h; path = "cordova-plugin-segment/SEGAnalyticsUtils.h"; sourceTree = "<group>"; };
+		219C27717181449A920487A9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "PluginTest/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		220DDBC3E6FB4C26B45840FD /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = card.io.cordova.mobilesdk/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
 		223D82C01DF045F4985302D5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		225EE4B91B9041EEA7400F45 /* MessageUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		22DD08D7331B4F77895CFF99 /* CoreVideo.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		266C605B07514868A2A7C430 /* CDVSound.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSound.h; path = "cordova-plugin-media/CDVSound.h"; sourceTree = "<group>"; };
 		26DE2F6CF74247ECB3FAE37A /* CDVApplePay.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVApplePay.h; path = "cordova-plugin-applepay/CDVApplePay.h"; sourceTree = "<group>"; };
-		29AE3553DA46421D91F32F97 /* Diagnostic.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Diagnostic.h; path = cordova.plugins.diagnostic/Diagnostic.h; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29C3CE7CE62A4DD7989E4B86 /* Toast+UIView.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "cordova-plugin-x-toast/Toast+UIView.m"; sourceTree = "<group>"; };
 		2EDF0E8C6B48490DAAA9B9A7 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = com.paypal.cordova.mobilesdk/PayPalPaymentViewController.h; sourceTree = "<group>"; };
@@ -152,9 +152,12 @@
 		3ED47AB6B7A44A06AD5AA582 /* libc++.dylib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		4379853BB0CC4C3B9E8EFB27 /* PayPalMobile.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = com.paypal.cordova.mobilesdk/PayPalMobile.h; sourceTree = "<group>"; };
 		46D873AE618A441096F6E1E3 /* Photos.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		47B8E88D28494993A4CFC15A /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "PluginTest/Plugins/cordova-plugin-facebook4/Bolts.framework"; sourceTree = "<group>"; };
 		4E66521C2D6D451488090734 /* SEGAnalyticsRequest.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = SEGAnalyticsRequest.h; path = "cordova-plugin-segment/SEGAnalyticsRequest.h"; sourceTree = "<group>"; };
+		4E6F3FF7403B468589B884FA /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = "cordova-plugin-facebook4/FacebookConnectPlugin.h"; sourceTree = "<group>"; };
 		549C14B4A9D64443A99CD012 /* CDVVibration.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVVibration.m; path = "cordova-plugin-vibration/CDVVibration.m"; sourceTree = "<group>"; };
 		54D44EB5035C437BA34E8C1F /* Foundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		590304EEEA704F6FA6101B18 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "PluginTest/Plugins/cordova-plugin-facebook4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		59B86F07F0234B12B59374D8 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5BCEF705F4D7434EBDCA5C9B /* CDVVibration.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVVibration.h; path = "cordova-plugin-vibration/CDVVibration.h"; sourceTree = "<group>"; };
 		5EA41AC19A0249238B90DA82 /* AppDelegate+BranchSdk.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+BranchSdk.m"; path = "io.branch.sdk/AppDelegate+BranchSdk.m"; sourceTree = "<group>"; };
@@ -198,7 +201,7 @@
 		A4800E18697E41B3AF299A73 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = card.io.cordova.mobilesdk/CardIOViewDelegate.h; sourceTree = "<group>"; };
 		A4AA7CCCAC5D431F8E27E3CB /* CDVReachability.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		A53AA51AB8C14102B37DE7AA /* CDVLocation.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocation.h; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; };
-		ACD5ADE153B74172A244B1CD /* Diagnostic.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Diagnostic.m; path = cordova.plugins.diagnostic/Diagnostic.m; sourceTree = "<group>"; };
+		A8FDA124533740EAAA232E67 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "PluginTest/Plugins/cordova-plugin-facebook4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		AE3E953D039143D1B2B81097 /* CDVCompass.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVCompass.h; path = "cordova-plugin-device-orientation/CDVCompass.h"; sourceTree = "<group>"; };
 		AE9E2A861AC74F78AD04C3AD /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AED873B19B244A23B48EAC27 /* Insomnia.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Insomnia.m; path = "cordova-plugin-insomnia/Insomnia.m"; sourceTree = "<group>"; };
@@ -249,13 +252,10 @@
 		F4FEEC31F89749D0AFC958F4 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libCardIO.a; path = PluginTest/Plugins/card.io.cordova.mobilesdk/libCardIO.a; sourceTree = "<group>"; };
 		F735A175C2414B0AB92ED280 /* CDVApplePay.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVApplePay.m; path = "cordova-plugin-applepay/CDVApplePay.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = PluginTest/config.xml; sourceTree = "<group>"; };
+		FC2900ED3EAB49B68C29872E /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FacebookConnectPlugin.m; path = "cordova-plugin-facebook4/FacebookConnectPlugin.m"; sourceTree = "<group>"; };
 		FFC3B3F1F2A5477D9447A094 /* AnalyticsPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = AnalyticsPlugin.m; path = "cordova-plugin-segment/AnalyticsPlugin.m"; sourceTree = "<group>"; };
-		FC2900ED3EAB49B68C29872E /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; name = "FacebookConnectPlugin.m"; path = "cordova-plugin-facebook4/FacebookConnectPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		4E6F3FF7403B468589B884FA /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; name = "FacebookConnectPlugin.h"; path = "cordova-plugin-facebook4/FacebookConnectPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		47B8E88D28494993A4CFC15A /* Bolts.framework */ = {isa = PBXFileReference; name = "Bolts.framework"; path = "PluginTest/Plugins/cordova-plugin-facebook4/Bolts.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		219C27717181449A920487A9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; name = "FBSDKCoreKit.framework"; path = "PluginTest/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		A8FDA124533740EAAA232E67 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; name = "FBSDKLoginKit.framework"; path = "PluginTest/Plugins/cordova-plugin-facebook4/FBSDKLoginKit.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		590304EEEA704F6FA6101B18 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; name = "FBSDKShareKit.framework"; path = "PluginTest/Plugins/cordova-plugin-facebook4/FBSDKShareKit.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B2CCA6A527B54E88905D9505 /* Diagnostic.m */ = {isa = PBXFileReference; name = "Diagnostic.m"; path = "cordova.plugins.diagnostic/Diagnostic.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B45F62E5132F44CF9E9531A4 /* Diagnostic.h */ = {isa = PBXFileReference; name = "Diagnostic.h"; path = "cordova.plugins.diagnostic/Diagnostic.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,8 +476,6 @@
 				30E932483AE544EBB114A943 /* Toast.m */,
 				E89A2B3183EC4ACE8C61FD43 /* Toast+UIView.h */,
 				13B0AA10DEDE43059FBFB93C /* Toast.h */,
-				ACD5ADE153B74172A244B1CD /* Diagnostic.m */,
-				29AE3553DA46421D91F32F97 /* Diagnostic.h */,
 				8D35182D10CF491AB903A8CC /* IonicKeyboard.m */,
 				F07E0C9280394BDC979F2D95 /* IonicKeyboard.h */,
 				AED873B19B244A23B48EAC27 /* Insomnia.m */,
@@ -526,6 +524,8 @@
 				15A236E5F3BA429291162AAD /* SEGAnalytics.h */,
 				FC2900ED3EAB49B68C29872E /* FacebookConnectPlugin.m */,
 				4E6F3FF7403B468589B884FA /* FacebookConnectPlugin.h */,
+				B2CCA6A527B54E88905D9505 /* Diagnostic.m */,
+				B45F62E5132F44CF9E9531A4 /* Diagnostic.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -672,7 +672,6 @@
 				116B6F0847C342B3A0C3A54A /* CDVVibration.m in Sources */,
 				FF8935937D42493AA42133E1 /* Toast+UIView.m in Sources */,
 				8E6B3DA75131411C9A1BB132 /* Toast.m in Sources */,
-				B3E6243541EA424AACAD158A /* Diagnostic.m in Sources */,
 				B310E98DB2484DB49F53EC5B /* IonicKeyboard.m in Sources */,
 				0B7AF55BE43649B9A9BDF33C /* Insomnia.m in Sources */,
 				FAE69A7B245B4554A7F795B8 /* CDVApplePay.m in Sources */,
@@ -682,6 +681,7 @@
 				5F622926E75146EAB7970335 /* PayPalMobileCordovaPlugin.m in Sources */,
 				5D231A700FAA4780ABE2F19A /* AnalyticsPlugin.m in Sources */,
 				BBD7190BFED24971A224B072 /* FacebookConnectPlugin.m in Sources */,
+				561055BD41C5417B9541CA7E /* Diagnostic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,7 +705,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = PluginTest/Resources/PluginTest.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PluginTest/Resources/PluginTest.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -726,7 +726,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "PluginTest/PluginTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -751,7 +751,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = PluginTest/Resources/PluginTest.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PluginTest/Resources/PluginTest.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -770,7 +770,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "PluginTest/PluginTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PluginTest/Plugins/card.io.cordova.mobilesdk\"",
@@ -797,7 +797,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = PluginTest/Resources/PluginTest.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PluginTest/Resources/PluginTest.entitlements";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
@@ -827,7 +827,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = PluginTest/Resources/PluginTest.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PluginTest/Resources/PluginTest.entitlements";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;

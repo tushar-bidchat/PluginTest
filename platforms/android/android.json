@@ -217,11 +217,11 @@
                     ],
                     "/manifest/application": [
                         {
-                            "xml": "<receiver android:name=\"cordova.plugins.Diagnostic$LocationProviderChangedReceiver\"><intent-filter><action android:name=\"android.location.PROVIDERS_CHANGED\" /></intent-filter></receiver>",
+                            "xml": "<meta-data android:name=\"io.branch.sdk.BranchKey\" android:value=\"key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<meta-data android:name=\"io.branch.sdk.BranchKey\" android:value=\"key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5\" />",
+                            "xml": "<receiver android:name=\"cordova.plugins.Diagnostic$LocationProviderChangedReceiver\"><intent-filter><action android:name=\"android.location.PROVIDERS_CHANGED\" /></intent-filter></receiver>",
                             "count": 1
                         }
                     ],
@@ -245,11 +245,11 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Diagnostic\"><param name=\"android-package\" value=\"cordova.plugins.Diagnostic\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"BranchSDK\"><param name=\"android-package\" value=\"io.branch.BranchSDK\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"BranchSDK\"><param name=\"android-package\" value=\"io.branch.BranchSDK\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"Diagnostic\"><param name=\"android-package\" value=\"cordova.plugins.Diagnostic\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -327,9 +327,6 @@
         "cordova-plugin-x-toast": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "cordova.plugins.diagnostic": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
@@ -364,6 +361,9 @@
         "cordova-plugin-facebook4": {
             "APP_ID": "1643392872598880",
             "APP_NAME": "Bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -749,13 +749,6 @@
             "id": "cordova-plugin-x-toast.tests"
         },
         {
-            "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
-            "id": "cordova.plugins.diagnostic.Diagnostic",
-            "clobbers": [
-                "cordova.plugins.diagnostic"
-            ]
-        },
-        {
             "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
             "id": "ionic-plugin-keyboard.keyboard",
             "clobbers": [
@@ -809,6 +802,13 @@
             "clobbers": [
                 "facebookConnectPlugin"
             ]
+        },
+        {
+            "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
+            "id": "cordova.plugins.diagnostic.Diagnostic",
+            "clobbers": [
+                "cordova.plugins.diagnostic"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -829,7 +829,6 @@
         "cordova-plugin-screen-orientation": "1.4.2",
         "cordova-plugin-vibration": "2.1.1",
         "cordova-plugin-x-toast": "2.5.2",
-        "cordova.plugins.diagnostic": "3.1.0",
         "ionic-plugin-keyboard": "2.2.1",
         "cordova-plugin-insomnia": "4.2.0",
         "cordova-plugin-applepay": "0.0.1",
@@ -839,6 +838,7 @@
         "card.io.cordova.mobilesdk": "2.0.2",
         "com.paypal.cordova.mobilesdk": "3.2.2",
         "cordova-plugin-segment": "0.0.2",
-        "cordova-plugin-facebook4": "1.7.1"
+        "cordova-plugin-facebook4": "1.7.1",
+        "cordova.plugins.diagnostic": "3.1.1"
     }
 }

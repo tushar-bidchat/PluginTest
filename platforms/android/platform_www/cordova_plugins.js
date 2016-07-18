@@ -380,13 +380,6 @@ module.exports = [
         "id": "cordova-plugin-x-toast.tests"
     },
     {
-        "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
-        "id": "cordova.plugins.diagnostic.Diagnostic",
-        "clobbers": [
-            "cordova.plugins.diagnostic"
-        ]
-    },
-    {
         "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
         "id": "ionic-plugin-keyboard.keyboard",
         "clobbers": [
@@ -440,6 +433,13 @@ module.exports = [
         "clobbers": [
             "facebookConnectPlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
+        "id": "cordova.plugins.diagnostic.Diagnostic",
+        "clobbers": [
+            "cordova.plugins.diagnostic"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -462,7 +462,6 @@ module.exports.metadata =
     "cordova-plugin-screen-orientation": "1.4.2",
     "cordova-plugin-vibration": "2.1.1",
     "cordova-plugin-x-toast": "2.5.2",
-    "cordova.plugins.diagnostic": "3.1.0",
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-insomnia": "4.2.0",
     "cordova-plugin-applepay": "0.0.1",
@@ -472,7 +471,8 @@ module.exports.metadata =
     "card.io.cordova.mobilesdk": "2.0.2",
     "com.paypal.cordova.mobilesdk": "3.2.2",
     "cordova-plugin-segment": "0.0.2",
-    "cordova-plugin-facebook4": "1.7.1"
+    "cordova-plugin-facebook4": "1.7.1",
+    "cordova.plugins.diagnostic": "3.1.1"
 };
 // BOTTOM OF METADATA
 });

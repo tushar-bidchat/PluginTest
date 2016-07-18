@@ -140,15 +140,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova.plugins.diagnostic": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/tushar-bidchat/cordova-diagnostic-plugin.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "ionic-plugin-keyboard": {
         "source": {
             "type": "git",
@@ -244,5 +235,14 @@
             "APP_ID": "1643392872598880",
             "APP_NAME": "Bidchat"
         }
+    },
+    "cordova.plugins.diagnostic": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-diagnostic-plugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
