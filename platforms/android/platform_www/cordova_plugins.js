@@ -64,6 +64,170 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+        "id": "cordova-plugin-geolocation.geolocation",
+        "clobbers": [
+            "navigator.geolocation"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+        "id": "cordova-plugin-geolocation.PositionError",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+        "id": "cordova-plugin-globalization.GlobalizationError",
+        "clobbers": [
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+        "id": "cordova-plugin-globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "id": "cordova-plugin-network-information.network",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "id": "cordova-plugin-network-information.Connection",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation",
+        "clobbers": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.android.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation.android",
+        "merges": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+        "id": "cordova-plugin-x-toast.Toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+        "id": "cordova-plugin-x-toast.tests"
+    },
+    {
+        "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "id": "ionic-plugin-keyboard.keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ],
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-insomnia/www/Insomnia.js",
+        "id": "cordova-plugin-insomnia.Insomnia",
+        "clobbers": [
+            "window.plugins.insomnia"
+        ]
+    },
+    {
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "id": "es6-promise-plugin.Promise",
+        "runs": true
+    },
+    {
+        "file": "plugins/io.branch.sdk/www/branch.js",
+        "id": "io.branch.sdk.Branch",
+        "clobbers": [
+            "Branch"
+        ]
+    },
+    {
+        "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
+        "id": "card.io.cordova.mobilesdk.CardIO",
+        "clobbers": [
+            "CardIO"
+        ]
+    },
+    {
+        "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
+        "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
+        "clobbers": [
+            "PayPalMobile"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-segment/www/analytics.js",
+        "id": "cordova-plugin-segment.analytics",
+        "clobbers": [
+            "analytics"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "clobbers": [
+            "facebookConnectPlugin"
+        ]
+    },
+    {
+        "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
+        "id": "cordova.plugins.diagnostic.Diagnostic",
+        "clobbers": [
+            "cordova.plugins.diagnostic"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+        "id": "cordova-plugin-camera.Camera",
+        "clobbers": [
+            "Camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+        "id": "cordova-plugin-camera.CameraPopoverOptions",
+        "clobbers": [
+            "CameraPopoverOptions"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/Camera.js",
+        "id": "cordova-plugin-camera.camera",
+        "clobbers": [
+            "navigator.camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+        "id": "cordova-plugin-camera.CameraPopoverHandle",
+        "clobbers": [
+            "CameraPopoverHandle"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "clobbers": [
@@ -215,46 +379,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
-        "id": "cordova-plugin-geolocation.geolocation",
-        "clobbers": [
-            "navigator.geolocation"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-        "id": "cordova-plugin-geolocation.PositionError",
-        "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
-        "id": "cordova-plugin-globalization.GlobalizationError",
-        "clobbers": [
-            "window.GlobalizationError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-globalization/www/globalization.js",
-        "id": "cordova-plugin-globalization.globalization",
-        "clobbers": [
-            "navigator.globalization"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
         "id": "cordova-plugin-media-capture.CaptureAudioOptions",
         "clobbers": [
@@ -304,141 +428,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-network-information/www/network.js",
-        "id": "cordova-plugin-network-information.network",
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "id": "cordova-plugin-media.MediaError",
         "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
+            "window.MediaError"
         ]
     },
     {
-        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-        "id": "cordova-plugin-network-information.Connection",
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "id": "cordova-plugin-media.Media",
         "clobbers": [
-            "Connection"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
-        "id": "cordova-plugin-screen-orientation.screenorientation",
-        "clobbers": [
-            "cordova.plugins.screenorientation"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.android.js",
-        "id": "cordova-plugin-screen-orientation.screenorientation.android",
-        "merges": [
-            "cordova.plugins.screenorientation"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
-        "id": "cordova-plugin-vibration.notification",
-        "merges": [
-            "navigator.notification",
-            "navigator"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
-        "id": "cordova-plugin-x-toast.Toast",
-        "clobbers": [
-            "window.plugins.toast"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
-        "id": "cordova-plugin-x-toast.tests"
-    },
-    {
-        "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
-        "id": "ionic-plugin-keyboard.keyboard",
-        "clobbers": [
-            "cordova.plugins.Keyboard"
-        ],
-        "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-insomnia/www/Insomnia.js",
-        "id": "cordova-plugin-insomnia.Insomnia",
-        "clobbers": [
-            "window.plugins.insomnia"
-        ]
-    },
-    {
-        "file": "plugins/es6-promise-plugin/www/promise.js",
-        "id": "es6-promise-plugin.Promise",
-        "runs": true
-    },
-    {
-        "file": "plugins/io.branch.sdk/www/branch.js",
-        "id": "io.branch.sdk.Branch",
-        "clobbers": [
-            "Branch"
-        ]
-    },
-    {
-        "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
-        "id": "card.io.cordova.mobilesdk.CardIO",
-        "clobbers": [
-            "CardIO"
-        ]
-    },
-    {
-        "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
-        "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
-        "clobbers": [
-            "PayPalMobile"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-segment/www/analytics.js",
-        "id": "cordova-plugin-segment.analytics",
-        "clobbers": [
-            "analytics"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-        "clobbers": [
-            "facebookConnectPlugin"
-        ]
-    },
-    {
-        "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
-        "id": "cordova.plugins.diagnostic.Diagnostic",
-        "clobbers": [
-            "cordova.plugins.diagnostic"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-        "id": "cordova-plugin-camera.Camera",
-        "clobbers": [
-            "Camera"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-        "id": "cordova-plugin-camera.CameraPopoverOptions",
-        "clobbers": [
-            "CameraPopoverOptions"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/Camera.js",
-        "id": "cordova-plugin-camera.camera",
-        "clobbers": [
-            "navigator.camera"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
-        "id": "cordova-plugin-camera.CameraPopoverHandle",
-        "clobbers": [
-            "CameraPopoverHandle"
+            "window.Media"
         ]
     }
 ];
@@ -452,11 +452,8 @@ module.exports.metadata =
     "cordova-plugin-device-motion": "1.2.1",
     "cordova-plugin-device-orientation": "1.0.4-dev",
     "cordova-plugin-dialogs": "1.2.1",
-    "cordova-plugin-file": "4.2.0",
     "cordova-plugin-geolocation": "2.2.1-dev",
     "cordova-plugin-globalization": "1.0.3",
-    "cordova-plugin-media": "2.3.0",
-    "cordova-plugin-media-capture": "1.3.0",
     "cordova-plugin-network-information": "1.2.1",
     "cordova-plugin-screen-orientation": "1.4.2",
     "cordova-plugin-vibration": "2.1.1",
@@ -472,7 +469,10 @@ module.exports.metadata =
     "cordova-plugin-segment": "0.0.2",
     "cordova-plugin-facebook4": "1.7.1",
     "cordova.plugins.diagnostic": "3.1.1",
-    "cordova-plugin-camera": "2.2.1-dev"
+    "cordova-plugin-camera": "2.2.1-dev",
+    "cordova-plugin-file": "4.2.0",
+    "cordova-plugin-media-capture": "1.3.0",
+    "cordova-plugin-media": "2.3.0"
 };
 // BOTTOM OF METADATA
 });

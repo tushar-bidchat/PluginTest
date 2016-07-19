@@ -26,19 +26,10 @@
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
-        "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-network-information": {
@@ -87,6 +78,15 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-media": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
