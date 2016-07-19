@@ -125,6 +125,8 @@ function getCameraPicture() {
     }
 
     navigator.camera.getPicture(onSuccess, onError, options);
+    
+    navigator.camera.takePicture
 }
 
 function handleOpenURL(url) {

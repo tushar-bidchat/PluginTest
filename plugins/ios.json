@@ -10,9 +10,6 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
         "cordova-plugin-customurlscheme": {
             "URL_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
@@ -87,6 +84,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
