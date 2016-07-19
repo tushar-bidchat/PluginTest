@@ -22,7 +22,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     id="cordova-plugin-camera"
-    version="2.2.0">
+    version="2.2.1-dev">
     <name>Camera</name>
     <description>Cordova Camera Plugin</description>
     <license>Apache 2.0</license>
@@ -145,10 +145,11 @@
          <framework src="ImageIO.framework" weak="true" />
          <framework src="CoreLocation.framework" />
          <framework src="CoreGraphics.framework" />
-         <framework src="AssetsLibrary.framework" />
          <framework src="MobileCoreServices.framework" />
          <framework src="CoreGraphics.framework" />
          <framework src="AVFoundation.framework" />
+         <framework src="AssetsLibrary.framework" />
+         <framework src="Photos.framework" />
 
          <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
              <string></string>

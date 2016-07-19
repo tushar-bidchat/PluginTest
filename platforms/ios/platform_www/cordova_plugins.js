@@ -554,7 +554,7 @@ module.exports.metadata =
     "cordova-plugin-segment": "0.0.2",
     "cordova-plugin-facebook4": "1.7.1",
     "cordova.plugins.diagnostic": "3.1.1",
-    "cordova-plugin-camera": "2.2.0"
+    "cordova-plugin-camera": "2.2.1-dev"
 }
 // BOTTOM OF METADATA
 });

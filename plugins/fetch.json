@@ -239,8 +239,9 @@
     },
     "cordova-plugin-camera": {
         "source": {
-            "type": "registry",
-            "id": "cordova-plugin-camera"
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-plugin-camera.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

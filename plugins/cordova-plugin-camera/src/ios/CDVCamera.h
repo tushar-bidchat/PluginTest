@@ -6,9 +6,9 @@
  to you under the Apache License, Version 2.0 (the
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
-
+ 
  http://www.apache.org/licenses/LICENSE-2.0
-
+ 
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -70,7 +70,9 @@ typedef NSUInteger CDVMediaType;
 
 @property (copy)   NSString* callbackId;
 @property (copy)   NSString* postUrl;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
 @property (strong) UIPopoverController* pickerPopoverController;
+#endif
 @property (assign) BOOL cropToSize;
 @property (strong) UIView* webView;
 
@@ -81,9 +83,9 @@ typedef NSUInteger CDVMediaType;
 // ======================================================================= //
 
 @interface CDVCamera : CDVPlugin <UIImagePickerControllerDelegate,
-                       UINavigationControllerDelegate,
-                       UIPopoverControllerDelegate,
-                       CLLocationManagerDelegate>
+UINavigationControllerDelegate,
+UIPopoverControllerDelegate,
+CLLocationManagerDelegate>
 {}
 
 @property (strong) CDVCameraPicker* pickerController;
