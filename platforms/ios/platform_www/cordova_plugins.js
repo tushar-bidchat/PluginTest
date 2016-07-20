@@ -452,6 +452,22 @@ module.exports = [
         "runs": true
     },
     {
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "id": "cordova-plugin-media.MediaError",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "id": "cordova-plugin-media.Media",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
         "id": "cordova-plugin-media-capture.CaptureAudioOptions",
         "pluginId": "cordova-plugin-media-capture",
@@ -500,27 +516,17 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-media-capture/www/helpers.js",
+        "id": "cordova-plugin-media-capture.helpers",
+        "pluginId": "cordova-plugin-media-capture",
+        "runs": true
+    },
+    {
         "file": "plugins/cordova-plugin-media-capture/www/capture.js",
         "id": "cordova-plugin-media-capture.capture",
         "pluginId": "cordova-plugin-media-capture",
         "clobbers": [
             "navigator.device.capture"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.Media"
         ]
     }
 ];
@@ -553,8 +559,8 @@ module.exports.metadata =
     "cordova.plugins.diagnostic": "3.1.1",
     "cordova-plugin-camera": "2.2.1-dev",
     "cordova-plugin-file": "4.2.0",
-    "cordova-plugin-media-capture": "1.3.0",
-    "cordova-plugin-media": "2.3.0"
+    "cordova-plugin-media": "2.3.0",
+    "cordova-plugin-media-capture": "1.3.1-dev"
 }
 // BOTTOM OF METADATA
 });

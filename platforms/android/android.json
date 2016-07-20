@@ -121,11 +121,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Capture\"><param name=\"android-package\" value=\"org.apache.cordova.mediacapture.Capture\" /></feature>",
+                            "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
+                            "xml": "<feature name=\"Capture\"><param name=\"android-package\" value=\"org.apache.cordova.mediacapture.Capture\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -155,15 +155,19 @@
                             "count": 2
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.RECORD_VIDEO\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
                             "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_VIDEO\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
                     ],
@@ -360,10 +364,10 @@
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "cordova-plugin-media-capture": {
+        "cordova-plugin-media": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "cordova-plugin-media": {
+        "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -748,6 +752,20 @@
             "runs": true
         },
         {
+            "file": "plugins/cordova-plugin-media/www/MediaError.js",
+            "id": "cordova-plugin-media.MediaError",
+            "clobbers": [
+                "window.MediaError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-media/www/Media.js",
+            "id": "cordova-plugin-media.Media",
+            "clobbers": [
+                "window.Media"
+            ]
+        },
+        {
             "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
             "id": "cordova-plugin-media-capture.CaptureAudioOptions",
             "clobbers": [
@@ -790,6 +808,11 @@
             ]
         },
         {
+            "file": "plugins/cordova-plugin-media-capture/www/helpers.js",
+            "id": "cordova-plugin-media-capture.helpers",
+            "runs": true
+        },
+        {
             "file": "plugins/cordova-plugin-media-capture/www/capture.js",
             "id": "cordova-plugin-media-capture.capture",
             "clobbers": [
@@ -797,18 +820,9 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-media/www/MediaError.js",
-            "id": "cordova-plugin-media.MediaError",
-            "clobbers": [
-                "window.MediaError"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-media/www/Media.js",
-            "id": "cordova-plugin-media.Media",
-            "clobbers": [
-                "window.Media"
-            ]
+            "file": "plugins/cordova-plugin-media-capture/www/android/init.js",
+            "id": "cordova-plugin-media-capture.init",
+            "runs": true
         }
     ],
     "plugin_metadata": {
@@ -838,7 +852,7 @@
         "cordova.plugins.diagnostic": "3.1.1",
         "cordova-plugin-camera": "2.2.1-dev",
         "cordova-plugin-file": "4.2.0",
-        "cordova-plugin-media-capture": "1.3.0",
-        "cordova-plugin-media": "2.3.0"
+        "cordova-plugin-media": "2.3.0",
+        "cordova-plugin-media-capture": "1.3.1-dev"
     }
 }
