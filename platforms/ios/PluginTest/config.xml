@@ -24,9 +24,6 @@
     <feature name="Compass">
         <param name="ios-package" value="CDVCompass" />
     </feature>
-    <feature name="Notification">
-        <param name="ios-package" value="CDVNotification" />
-    </feature>
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
@@ -94,6 +91,9 @@
     </feature>
     <feature name="Capture">
         <param name="ios-package" value="CDVCapture" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
     </feature>
     <name>PluginTest</name>
     <description>

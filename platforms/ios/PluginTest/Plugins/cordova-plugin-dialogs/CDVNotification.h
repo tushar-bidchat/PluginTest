@@ -31,7 +31,13 @@
 
 @end
 
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
 @interface CDVAlertView : UIAlertView {}
+#else
+
+@interface CDVAlertView : UIAlertController {}
+#endif
 @property (nonatomic, copy) NSString* callbackId;
 
 @end

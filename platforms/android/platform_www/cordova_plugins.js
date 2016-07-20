@@ -50,20 +50,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "id": "cordova-plugin-dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-        "id": "cordova-plugin-dialogs.notification_android",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
         "id": "cordova-plugin-geolocation.geolocation",
         "clobbers": [
@@ -450,6 +436,20 @@ module.exports = [
         "file": "plugins/cordova-plugin-media-capture/www/android/init.js",
         "id": "cordova-plugin-media-capture.init",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+        "id": "cordova-plugin-dialogs.notification_android",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -461,7 +461,6 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-device-motion": "1.2.1",
     "cordova-plugin-device-orientation": "1.0.4-dev",
-    "cordova-plugin-dialogs": "1.2.1",
     "cordova-plugin-geolocation": "2.2.1-dev",
     "cordova-plugin-globalization": "1.0.3",
     "cordova-plugin-network-information": "1.2.1",
@@ -482,7 +481,8 @@ module.exports.metadata =
     "cordova-plugin-camera": "2.2.1-dev",
     "cordova-plugin-file": "4.2.0",
     "cordova-plugin-media": "2.3.0",
-    "cordova-plugin-media-capture": "1.3.1-dev"
+    "cordova-plugin-media-capture": "1.3.1-dev",
+    "cordova-plugin-dialogs": "1.2.2-dev"
 };
 // BOTTOM OF METADATA
 });
