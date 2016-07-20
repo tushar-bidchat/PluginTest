@@ -31,7 +31,11 @@ function buttonOneClicked() {
     
 //    showIsWifiAvailable();
     
-    isAuthorizedForContacts();
+//    isAuthorizedForContacts();
+    
+//    showNativeAlert("natively hi");
+    nativeConfirm();
+    nativeNamePrompt();
 }
 
 function showInformationMessage(message) {
@@ -39,12 +43,48 @@ function showInformationMessage(message) {
     var okPressed = function() {
         console.log('Ok Pressed');
     }
+}
+
+function showNativeAlert(message) {
+    
+    var okPressed = function(error) {
+        console.log(error);
+    }
     
     navigator.notification.alert(
     message,        // message
     okPressed,      // callback
     'Information',  // title
     'Ok'            // buttonName
+    );
+}
+
+function nativeConfirm() {
+    
+    function onConfirm(buttonIndex) {
+    alert('You selected button ' + buttonIndex);
+}
+
+    navigator.notification.confirm(
+    'You are the winner!', // message
+     onConfirm,            // callback to invoke with index of button pressed
+    'Game Over',           // title
+    ['Restart','Exit']     // buttonLabels
+    );
+}
+
+function nativeNamePrompt() {
+    
+    function onPrompt(results) {
+    alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+}
+
+navigator.notification.prompt(
+    'Please enter your name',  // message
+    onPrompt,                  // callback to invoke
+    'Registration',            // title
+    ['Ok','Exit'],             // buttonLabels
+    'Jane Doe'                 // defaultText
     );
 }
 
