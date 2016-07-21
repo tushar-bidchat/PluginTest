@@ -6,9 +6,9 @@
  to you under the Apache License, Version 2.0 (the
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
-
+ 
  http://www.apache.org/licenses/LICENSE-2.0
-
+ 
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -24,6 +24,7 @@
 #import <AssetsLibrary/ALAssetRepresentation.h>
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <Photos/Photos.h>
 
 NSString* const kCDVAssetsLibraryPrefix = @"assets-library://";
 NSString* const kCDVAssetsLibraryScheme = @"assets-library";
@@ -35,9 +36,9 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
 /*
  The CDVAssetLibraryFilesystem works with resources which are identified
  by iOS as
-   asset-library://<path>
+ asset-library://<path>
  and represents them internally as URLs of the form
-   cdvfile://localhost/assets-library/<path>
+ cdvfile://localhost/assets-library/<path>
  */
 
 - (NSURL *)assetLibraryURLForLocalURL:(CDVFilesystemURL *)url
@@ -71,13 +72,13 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
     [dirEntry setObject:fullPath forKey:@"fullPath"];
     [dirEntry setObject:lastPart forKey:@"name"];
     [dirEntry setObject:self.name forKey: @"filesystemName"];
-
+    
     NSURL* nativeURL = [NSURL URLWithString:[NSString stringWithFormat:@"assets-library:/%@",fullPath]];
     if (self.urlTransformer) {
         nativeURL = self.urlTransformer(nativeURL);
     }
     dirEntry[@"nativeURL"] = [nativeURL absoluteString];
-
+    
     return dirEntry;
 }
 
@@ -90,7 +91,7 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
 + (NSString*)getMimeTypeFromPath:(NSString*)fullPath
 {
     NSString* mimeType = nil;
-
+    
     if (fullPath) {
         CFStringRef typeId = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[fullPath pathExtension], NULL);
         if (typeId) {
@@ -122,7 +123,7 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
 - (CDVPluginResult *)getFileForURL:(CDVFilesystemURL *)baseURI requestedPath:(NSString *)requestedPath options:(NSDictionary *)options
 {
     // return unsupported result for assets-library URLs
-   return [CDVPluginResult resultWithStatus:CDVCommandStatus_MALFORMED_URL_EXCEPTION messageAsString:@"getFile not supported for assets-library URLs."];
+    return [CDVPluginResult resultWithStatus:CDVCommandStatus_MALFORMED_URL_EXCEPTION messageAsString:@"getFile not supported for assets-library URLs."];
 }
 
 - (CDVPluginResult*)getParentForURL:(CDVFilesystemURL *)localURI
@@ -180,16 +181,18 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
     if ([[url.url scheme] isEqualToString:kCDVAssetsLibraryScheme]) {
         path = [url.url path];
     } else {
-       path = url.fullPath;
+        path = url.fullPath;
     }
     if ([path hasSuffix:@"/"]) {
-      path = [path substringToIndex:([path length]-1)];
+        path = [path substringToIndex:([path length]-1)];
     }
     return path;
 }
 
 - (void)readFileAtURL:(CDVFilesystemURL *)localURL start:(NSInteger)start end:(NSInteger)end callback:(void (^)(NSData*, NSString* mimeType, CDVFileError))callback
 {
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
     ALAssetsLibraryAssetForURLResultBlock resultBlock = ^(ALAsset* asset) {
         if (asset) {
             // We have the asset!  Get the data and send it off.
@@ -199,25 +202,47 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
             NSUInteger bufferSize = [assetRepresentation getBytes:buffer fromOffset:start length:size error:nil];
             NSData* data = [NSData dataWithBytesNoCopy:buffer length:bufferSize freeWhenDone:YES];
             NSString* MIMEType = (__bridge_transfer NSString*)UTTypeCopyPreferredTagWithClass((__bridge CFStringRef)[assetRepresentation UTI], kUTTagClassMIMEType);
-
+            
             callback(data, MIMEType, NO_ERROR);
         } else {
             callback(nil, nil, NOT_FOUND_ERR);
         }
     };
-
+    
     ALAssetsLibraryAccessFailureBlock failureBlock = ^(NSError* error) {
         // Retrieving the asset failed for some reason.  Send the appropriate error.
         NSLog(@"Error: %@", error);
         callback(nil, nil, SECURITY_ERR);
     };
-
+    
     ALAssetsLibrary* assetsLibrary = [[ALAssetsLibrary alloc] init];
     [assetsLibrary assetForURL:[self assetLibraryURLForLocalURL:localURL] resultBlock:resultBlock failureBlock:failureBlock];
+#else
+    PHAsset * asset = [[PHAsset fetchAssetsWithALAssetURLs:@[localURL] options:nil] firstObject];
+    if(asset) {
+        [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput *contentEditingInput, NSDictionary *info) {
+            NSString *MIMEType = (__bridge NSString *)UTTypeCopyPreferredTagWithClass((__bridge CFStringRef)contentEditingInput.uniformTypeIdentifier, kUTTagClassMIMEType);
+            
+            PHImageManager * imageManager = [[PHImageManager alloc] init];
+            [imageManager requestImageDataForAsset:asset options:nil resultHandler:^(NSData * imageData,
+                                                                                     NSString * _Nullable dataUTI,
+                                                                                     UIImageOrientation orientation,
+                                                                                     NSDictionary * _Nullable info) {
+                
+                callback(imageData, MIMEType, NO_ERROR);
+            }];
+        }];
+        
+    }
+    else {
+        callback(nil, nil, NOT_FOUND_ERR);
+    }
+#endif
 }
 
 - (void)getFileMetadataForURL:(CDVFilesystemURL *)localURL callback:(void (^)(CDVPluginResult *))callback
 {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
     // In this case, we need to use an asynchronous method to retrieve the file.
     // Because of this, we can't just assign to `result` and send it at the end of the method.
     // Instead, we return after calling the asynchronous method and send `result` in each of the blocks.
@@ -234,7 +259,7 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
             NSDate* creationDate = [asset valueForProperty:ALAssetPropertyDate];
             NSNumber* msDate = [NSNumber numberWithDouble:[creationDate timeIntervalSince1970] * 1000];
             [fileInfo setObject:msDate forKey:@"lastModifiedDate"];
-
+            
             callback([CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:fileInfo]);
         } else {
             // We couldn't find the asset.  Send the appropriate error.
@@ -245,9 +270,45 @@ NSString* const kCDVAssetsLibraryScheme = @"assets-library";
         // Retrieving the asset failed for some reason.  Send the appropriate error.
         callback([CDVPluginResult resultWithStatus:CDVCommandStatus_IO_EXCEPTION messageAsString:[error localizedDescription]]);
     };
-
+    
     ALAssetsLibrary* assetsLibrary = [[ALAssetsLibrary alloc] init];
     [assetsLibrary assetForURL:[self assetLibraryURLForLocalURL:localURL] resultBlock:resultBlock failureBlock:failureBlock];
     return;
+#else
+    
+    PHAsset * asset = [[PHAsset fetchAssetsWithALAssetURLs:@[localURL] options:nil] firstObject];
+    if(asset) {
+        
+        [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput *contentEditingInput, NSDictionary *info) {
+            NSString *MIMEType = (__bridge NSString *)UTTypeCopyPreferredTagWithClass((__bridge CFStringRef)contentEditingInput.uniformTypeIdentifier, kUTTagClassMIMEType);
+            
+            PHImageManager * imageManager = [[PHImageManager alloc] init];
+            [imageManager requestImageDataForAsset:asset options:nil resultHandler:^(NSData * imageData,
+                                                                                     NSString * _Nullable dataUTI,
+                                                                                     UIImageOrientation orientation,
+                                                                                     NSDictionary * _Nullable info) {
+                
+                PHAssetResource * resource = [[PHAssetResource assetResourcesForAsset:asset] firstObject];
+                
+                // We have the asset!  Populate the dictionary and send it off.
+                NSMutableDictionary* fileInfo = [NSMutableDictionary dictionaryWithCapacity:5];
+                [fileInfo setObject:[NSNumber numberWithUnsignedLongLong:imageData.length] forKey:@"size"];
+                [fileInfo setObject:localURL.fullPath forKey:@"fullPath"];
+                [fileInfo setObject:[resource originalFilename ] forKey:@"name"];
+                [fileInfo setObject:MIMEType forKey:@"type"];
+                NSDate* creationDate = [asset creationDate];
+                NSNumber* msDate = [NSNumber numberWithDouble:[creationDate timeIntervalSince1970] * 1000];
+                [fileInfo setObject:msDate forKey:@"lastModifiedDate"];
+                
+                callback([CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:fileInfo]);
+            }];
+        }];
+        
+    }
+    else {
+        callback([CDVPluginResult resultWithStatus:CDVCommandStatus_IO_EXCEPTION messageAsInt:NOT_FOUND_ERR]);
+    }
+    
+#endif
 }
 @end

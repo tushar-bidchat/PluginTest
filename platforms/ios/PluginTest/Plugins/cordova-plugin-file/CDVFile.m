@@ -586,8 +586,14 @@ NSString* const kCDVFilesystemURLPrefix = @"cdvfile";
 //encode path with percent escapes
 -(NSString *)encodePath:(NSString *)path
 {
-    NSString *decodedPath = [path stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; //decode incase it's already encoded to avoid encoding twice
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
+    NSString *decodedPath = [path stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //decode incase it's already encoded to avoid encoding twice
     return [decodedPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#else
+    NSString *decodedPath = [path stringByRemovingPercentEncoding];
+    return [decodedPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+#endif
 }
 
 

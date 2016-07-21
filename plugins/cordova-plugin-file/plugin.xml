@@ -247,6 +247,7 @@ to config.xml in order for the application to find previously stored files.
         </js-module>
 
         <framework src="AssetsLibrary.framework" />
+	 <framework src="Photos.framework" />
         <framework src="MobileCoreServices.framework" />
     </platform>
 

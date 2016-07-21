@@ -214,6 +214,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+        "id": "cordova-plugin-dialogs.notification_android",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "clobbers": [
@@ -436,20 +450,6 @@ module.exports = [
         "file": "plugins/cordova-plugin-media-capture/www/android/init.js",
         "id": "cordova-plugin-media-capture.init",
         "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "id": "cordova-plugin-dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-        "id": "cordova-plugin-dialogs.notification_android",
-        "merges": [
-            "navigator.notification"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -479,10 +479,10 @@ module.exports.metadata =
     "cordova-plugin-facebook4": "1.7.1",
     "cordova.plugins.diagnostic": "3.1.1",
     "cordova-plugin-camera": "2.2.1-dev",
+    "cordova-plugin-dialogs": "1.2.2-dev",
     "cordova-plugin-file": "4.2.0",
     "cordova-plugin-media": "2.3.0",
-    "cordova-plugin-media-capture": "1.3.1-dev",
-    "cordova-plugin-dialogs": "1.2.2-dev"
+    "cordova-plugin-media-capture": "1.3.1-dev"
 };
 // BOTTOM OF METADATA
 });

@@ -8,7 +8,7 @@
     "CoreTelephony.framework": 1,
     "QuartzCore.framework": 3,
     "CoreBluetooth.framework": 2,
-    "Photos.framework": 3,
+    "Photos.framework": 4,
     "AddressBook.framework": 2,
     "EventKit.framework": 2,
     "PassKit.framework": 1,

@@ -125,7 +125,13 @@
 - (CDVFilesystemURL *)URLforFullPath:(NSString *)fullPath
 {
     if (fullPath) {
+        
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
         NSString* escapedPath = [fullPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#else
+        NSString* escapedPath = [fullPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+#endif
+        
         if ([fullPath hasPrefix:@"/"]) {
             return [CDVFilesystemURL fileSystemURLWithString:[NSString stringWithFormat:@"%@://localhost/%@%@", kCDVFilesystemURLPrefix, self.name, escapedPath]];
         }
