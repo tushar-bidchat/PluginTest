@@ -135,6 +135,10 @@
                         {
                             "xml": "<feature name=\"PayPalMobile\"><param name=\"ios-package\" onload=\"true\" value=\"PayPalMobileCordovaPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppAvailability\"><param name=\"ios-package\" value=\"AppAvailability\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -317,6 +321,9 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "com.paypal.cordova.mobilesdk": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-appavailability": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -850,6 +857,14 @@
             "clobbers": [
                 "PayPalMobile"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
+            "id": "cordova-plugin-appavailability.AppAvailability",
+            "pluginId": "cordova-plugin-appavailability",
+            "clobbers": [
+                "appAvailability"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -880,6 +895,7 @@
         "es6-promise-plugin": "3.0.2",
         "io.branch.sdk": "2.1.10",
         "card.io.cordova.mobilesdk": "2.0.2",
-        "com.paypal.cordova.mobilesdk": "3.2.2"
+        "com.paypal.cordova.mobilesdk": "3.2.2",
+        "cordova-plugin-appavailability": "0.4.2"
     }
 }

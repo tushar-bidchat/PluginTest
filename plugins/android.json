@@ -91,6 +91,9 @@
         },
         "com.paypal.cordova.mobilesdk": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {

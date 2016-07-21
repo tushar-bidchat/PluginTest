@@ -84,6 +84,7 @@
 		9344782C69244F4F900587F9 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5F9B4F55034EF9B75B10C1 /* libopencv_imgproc.a */; };
 		31129D8B6AB7401FBB096194 /* PayPalMobileCordovaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A524CA7B4E5C4CB581891E52 /* PayPalMobileCordovaPlugin.m */; };
 		73C9C42E17B44E7C8EE6CAE9 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0CCA76A724CB8A0D4FD2F /* libPayPalMobile.a */; };
+		F45188DE486C4972B00894C0 /* AppAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = B6FAA5A9A0094E8A8CFCFD60 /* AppAvailability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +256,8 @@
 		692E437DDA204A7A82E5E785 /* PayPalPayment.h */ = {isa = PBXFileReference; name = "PayPalPayment.h"; path = "com.paypal.cordova.mobilesdk/PayPalPayment.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		C244F43640214A1A92AEA40F /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; name = "PayPalPaymentViewController.h"; path = "com.paypal.cordova.mobilesdk/PayPalPaymentViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		0D78F949B42741948979D08B /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; name = "PayPalProfileSharingViewController.h"; path = "com.paypal.cordova.mobilesdk/PayPalProfileSharingViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B6FAA5A9A0094E8A8CFCFD60 /* AppAvailability.m */ = {isa = PBXFileReference; name = "AppAvailability.m"; path = "cordova-plugin-appavailability/AppAvailability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9B95312C0662492F840CB835 /* AppAvailability.h */ = {isa = PBXFileReference; name = "AppAvailability.h"; path = "cordova-plugin-appavailability/AppAvailability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +528,8 @@
 				692E437DDA204A7A82E5E785 /* PayPalPayment.h */,
 				C244F43640214A1A92AEA40F /* PayPalPaymentViewController.h */,
 				0D78F949B42741948979D08B /* PayPalProfileSharingViewController.h */,
+				B6FAA5A9A0094E8A8CFCFD60 /* AppAvailability.m */,
+				9B95312C0662492F840CB835 /* AppAvailability.h */,
 			);
 			name = Plugins;
 			path = PluginTest/Plugins;
@@ -681,6 +686,7 @@
 				A320C9018D2D41A5851EBFCF /* AppDelegate+BranchSdk.m in Sources */,
 				B71BD59F7C154BBBB3C38733 /* CardIOCordovaPlugin.m in Sources */,
 				31129D8B6AB7401FBB096194 /* PayPalMobileCordovaPlugin.m in Sources */,
+				F45188DE486C4972B00894C0 /* AppAvailability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

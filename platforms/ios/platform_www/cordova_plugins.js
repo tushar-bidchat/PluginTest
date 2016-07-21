@@ -528,6 +528,14 @@ module.exports = [
         "clobbers": [
             "PayPalMobile"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
+        "id": "cordova-plugin-appavailability.AppAvailability",
+        "pluginId": "cordova-plugin-appavailability",
+        "clobbers": [
+            "appAvailability"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -560,7 +568,8 @@ module.exports.metadata =
     "es6-promise-plugin": "3.0.2",
     "io.branch.sdk": "2.1.10",
     "card.io.cordova.mobilesdk": "2.0.2",
-    "com.paypal.cordova.mobilesdk": "3.2.2"
+    "com.paypal.cordova.mobilesdk": "3.2.2",
+    "cordova-plugin-appavailability": "0.4.2"
 }
 // BOTTOM OF METADATA
 });

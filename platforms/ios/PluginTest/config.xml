@@ -95,6 +95,9 @@
     <feature name="PayPalMobile">
         <param name="ios-package" onload="true" value="PayPalMobileCordovaPlugin" />
     </feature>
+    <feature name="AppAvailability">
+        <param name="ios-package" value="AppAvailability" />
+    </feature>
     <name>PluginTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
