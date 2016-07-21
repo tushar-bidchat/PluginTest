@@ -55,11 +55,6 @@
             "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "io.branch.sdk": {
-            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
-            "URI_SCHEME": "bidchat",
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
         "cordova-plugin-add-swift-support": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
@@ -67,11 +62,6 @@
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova-plugin-segment": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
-        "cordova-plugin-facebook4": {
-            "APP_ID": "1643392872598880",
-            "APP_NAME": "Bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
         "cordova.plugins.diagnostic": {
@@ -86,10 +76,20 @@
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "cordova-plugin-media-capture": {
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1643392872598880",
+            "APP_NAME": "Bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "io.branch.sdk": {
+            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
+            "URI_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -97,10 +97,10 @@
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "es6-promise-plugin": {
+        "card.io.cordova.mobilesdk": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "card.io.cordova.mobilesdk": {
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     }

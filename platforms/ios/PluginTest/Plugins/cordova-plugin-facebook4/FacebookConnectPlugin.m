@@ -6,6 +6,7 @@
 //  Updated by Mathijs de Bruin on 11-08-25.
 //  Updated by Christine Abernathy on 13-01-22
 //  Updated by Jeduan Cornejo on 15-07-04
+//  Updated by Eds Keizer on 16-06-13
 //  Copyright 2011 Nitobi, Mathijs de Bruin. All rights reserved.
 //
 
@@ -45,7 +46,7 @@
         //launchOptions is nil when not start because of notification or url open
         launchOptions = [NSDictionary dictionary];
     }
-    
+
     [[FBSDKApplicationDelegate sharedInstance] application:[UIApplication sharedApplication] didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -140,7 +141,7 @@
     if ([command.arguments count] > 0) {
         permissions = command.arguments;
     }
-    
+
     // this will prevent from being unable to login after updating plugin or changing permissions
     // without refreshing there will be a cache problem. This simple call should fix the problems
     [FBSDKAccessToken refreshCurrentAccessToken:nil];
@@ -252,7 +253,7 @@
         [FBSDKMessageDialog showWithContent:content delegate:self];
         return;
 
-    } else if ([method isEqualToString:@"share"] || [method isEqualToString:@"share_open_graph"] || [method isEqualToString:@"feed"]) {
+    } else if ([method isEqualToString:@"share"] || [method isEqualToString:@"feed"]) {
         // Create native params
         FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
         content.contentURL = [NSURL URLWithString:params[@"href"]];
@@ -267,14 +268,56 @@
         dialog.delegate = self;
         // Adopt native share sheets with the following line
         if (params[@"share_sheet"]) {
-            dialog.mode = FBSDKShareDialogModeShareSheet;
+        	dialog.mode = FBSDKShareDialogModeShareSheet;
         } else if (params[@"share_feedBrowser"]) {
-            dialog.mode = FBSDKShareDialogModeFeedBrowser;
+        	dialog.mode = FBSDKShareDialogModeFeedBrowser;
+        } else if (params[@"share_native"]) {
+        	dialog.mode = FBSDKShareDialogModeNative;
+        } else if (params[@"share_feedWeb"]) {
+        	dialog.mode = FBSDKShareDialogModeFeedWeb;
         }
 
         [dialog show];
         return;
-    } else if ([method isEqualToString:@"apprequests"]) {
+    }
+    else if ( [method isEqualToString:@"share_open_graph"] ) {
+        if(!params[@"action"] || !params[@"object"]) {
+            NSLog(@"No action or object defined");
+            return;
+        }
+
+        //Get object JSON
+        NSError *jsonError;
+        NSData *objectData = [params[@"object"] dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:objectData
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:&jsonError];
+        
+        if(jsonError) {
+            NSLog(@"There was an error parsing your 'object' JSON string");
+        } else {
+            FBSDKShareOpenGraphObject *object = [FBSDKShareOpenGraphObject objectWithProperties:json];
+            FBSDKShareOpenGraphAction *action = [[FBSDKShareOpenGraphAction alloc] init];
+            action.actionType = params[@"action"];
+            if(!json[@"og:type"]) {
+                NSLog(@"No 'og:type' encountered in the object JSON. Please provide an Open Graph object type.");
+                return;
+            }
+            NSString *objectType = json[@"og:type"];
+            objectType = [objectType stringByReplacingOccurrencesOfString:@"."
+                                                               withString:@":"];
+            
+            [action setObject:object forKey:objectType];
+            FBSDKShareOpenGraphContent *content = [[FBSDKShareOpenGraphContent alloc] init];
+            content.action = action;
+            content.previewPropertyName = objectType;
+            [FBSDKShareDialog showFromViewController:self.topMostController
+                                         withContent:content
+                                            delegate:nil];
+        }
+        return;
+    }
+    else if ([method isEqualToString:@"apprequests"]) {
         FBSDKGameRequestDialog *dialog = [[FBSDKGameRequestDialog alloc] init];
         dialog.delegate = self;
         if (![dialog canShow]) {
@@ -495,11 +538,11 @@
 
 - (UIViewController*) topMostController {
     UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    
+
     while (topController.presentedViewController) {
         topController = topController.presentedViewController;
     }
-    
+
     return topController;
 }
 
@@ -545,8 +588,14 @@
     [pairs enumerateObjectsUsingBlock:
      ^(NSString *pair, NSUInteger idx, BOOL *stop) {
          NSArray *kv = [pair componentsSeparatedByString:@"="];
+         
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
          NSString *key = [kv[0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
          NSString *val = [kv[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#else
+         NSString *key = [kv[0] stringByRemovingPercentEncoding];
+         NSString *val = [kv[1] stringByRemovingPercentEncoding];
+#endif
 
          NSArray *matches = [regex matchesInString:key options:0 range:NSMakeRange(0, [key length])];
          if ([matches count] > 0) {
@@ -669,7 +718,7 @@
                                      messageAsString:[NSString stringWithFormat:@"Error: %@", error.description]];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:self.dialogCallbackId];
     self.dialogCallbackId = nil;
-    
+
 }
 
 

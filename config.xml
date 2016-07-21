@@ -31,7 +31,7 @@
         <android-prefix value="/X9Ug" />
         <host name="bnc.lt" scheme="https" />
     </branch-config>
-    <plugin name="cordova-plugin-facebook4" spec="~1.7.1">
+    <plugin name="cordova-plugin-facebook4" spec="https://github.com/tushar-bidchat/cordova-plugin-facebook4.git">
         <variable name="APP_ID" value="1643392872598880" />
         <variable name="APP_NAME" value="Bidchat" />
     </plugin>

@@ -67,6 +67,12 @@
         </array>
       </dict>
       <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb1643392872598880</string>
+        </array>
+      </dict>
+      <dict>
         <key>CFBundleURLName</key>
         <string>io.branch.sdk</string>
         <key>CFBundleURLSchemes</key>
@@ -74,23 +80,11 @@
           <string>bidchat</string>
         </array>
       </dict>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb1643392872598880</string>
-        </array>
-      </dict>
     </array>
     <key>StripePublishableKey</key>
     <string>pk_test_yIhgCzlKTfu9Tk8Sy6G84Ggt</string>
     <key>ApplePayMerchant</key>
     <string>merchant.com.bidchatapp.bidchat</string>
-    <key>branch_key</key>
-    <string>key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5</string>
-    <key>FacebookAppID</key>
-    <string>1643392872598880</string>
-    <key>FacebookDisplayName</key>
-    <string>Bidchat</string>
     <key>LSApplicationQueriesSchemes</key>
     <array>
       <string>fbapi</string>
@@ -102,5 +96,11 @@
     <string>This app will now only track your location when the screen is on and the app is displayed.</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>This app requires constant access to your location in order to track your position, even when the screen is off.</string>
+    <key>FacebookAppID</key>
+    <string>1643392872598880</string>
+    <key>FacebookDisplayName</key>
+    <string>Bidchat</string>
+    <key>branch_key</key>
+    <string>key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5</string>
   </dict>
 </plist>

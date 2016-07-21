@@ -139,18 +139,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/es6-promise-plugin/www/promise.js",
-        "id": "es6-promise-plugin.Promise",
-        "runs": true
-    },
-    {
-        "file": "plugins/io.branch.sdk/www/branch.js",
-        "id": "io.branch.sdk.Branch",
-        "clobbers": [
-            "Branch"
-        ]
-    },
-    {
         "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
         "id": "card.io.cordova.mobilesdk.CardIO",
         "clobbers": [
@@ -169,13 +157,6 @@ module.exports = [
         "id": "cordova-plugin-segment.analytics",
         "clobbers": [
             "analytics"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-        "clobbers": [
-            "facebookConnectPlugin"
         ]
     },
     {
@@ -379,20 +360,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
         "id": "cordova-plugin-media-capture.CaptureAudioOptions",
         "clobbers": [
@@ -450,6 +417,39 @@ module.exports = [
         "file": "plugins/cordova-plugin-media-capture/www/android/init.js",
         "id": "cordova-plugin-media-capture.init",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "id": "cordova-plugin-media.MediaError",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "id": "cordova-plugin-media.Media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "clobbers": [
+            "facebookConnectPlugin"
+        ]
+    },
+    {
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "id": "es6-promise-plugin.Promise",
+        "runs": true
+    },
+    {
+        "file": "plugins/io.branch.sdk/www/branch.js",
+        "id": "io.branch.sdk.Branch",
+        "clobbers": [
+            "Branch"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -470,19 +470,19 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-insomnia": "4.2.0",
     "cordova-plugin-applepay": "0.0.1",
-    "es6-promise-plugin": "3.0.2",
-    "io.branch.sdk": "2.1.7",
     "cordova-plugin-add-swift-support": "1.3.1",
     "card.io.cordova.mobilesdk": "2.0.2",
     "com.paypal.cordova.mobilesdk": "3.2.2",
     "cordova-plugin-segment": "0.0.2",
-    "cordova-plugin-facebook4": "1.7.1",
     "cordova.plugins.diagnostic": "3.1.1",
     "cordova-plugin-camera": "2.2.1-dev",
     "cordova-plugin-dialogs": "1.2.2-dev",
     "cordova-plugin-file": "4.2.0",
-    "cordova-plugin-media": "2.3.0",
-    "cordova-plugin-media-capture": "1.3.1-dev"
+    "cordova-plugin-media-capture": "1.3.1-dev",
+    "cordova-plugin-media": "2.3.1-dev",
+    "cordova-plugin-facebook4": "1.7.1",
+    "es6-promise-plugin": "3.0.2",
+    "io.branch.sdk": "2.1.10"
 };
 // BOTTOM OF METADATA
 });

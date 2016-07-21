@@ -243,11 +243,11 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile project(path: "CordovaLib", configuration: "debug")
     releaseCompile project(path: "CordovaLib", configuration: "release")
-    compile "io.branch.sdk.android:library:1+"
     compile "com.segment.analytics.android:analytics-core:+"
-    compile "com.facebook.android:facebook-android-sdk:4.8.+"
     compile "com.android.support:support-v4:23.+"
     compile "com.android.support:appcompat-v7:23.+"
+    compile "com.facebook.android:facebook-android-sdk:4.13.+"
+    compile "io.branch.sdk.android:library:1+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

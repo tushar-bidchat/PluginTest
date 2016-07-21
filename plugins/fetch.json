@@ -130,18 +130,6 @@
             "APPLE_PAY_MERCHANT": "merchant.com.bidchatapp.bidchat"
         }
     },
-    "io.branch.sdk": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {
-            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
-            "URI_SCHEME": "bidchat"
-        }
-    },
     "es6-promise-plugin": {
         "source": {
             "type": "git",
@@ -185,17 +173,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-facebook4": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-facebook4"
-        },
-        "is_top_level": true,
-        "variables": {
-            "APP_ID": "1643392872598880",
-            "APP_NAME": "Bidchat"
-        }
-    },
     "cordova.plugins.diagnostic": {
         "source": {
             "type": "git",
@@ -232,14 +209,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-media": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-media"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-media-capture": {
         "source": {
             "type": "git",
@@ -248,5 +217,38 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-media": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-plugin-media.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-plugin-facebook4.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1643392872598880",
+            "APP_NAME": "Bidchat"
+        }
+    },
+    "io.branch.sdk": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tushar-bidchat/cordova-ionic-phonegap-branch-deep-linking.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
+            "URI_SCHEME": "bidchat"
+        }
     }
 }

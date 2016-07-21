@@ -27,8 +27,11 @@
 var ACTUAL_PLAYBACK_TEST_TIMEOUT = 2 * 60 * 1000;
 
 var isWindows = cordova.platformId == 'windows8' || cordova.platformId == 'windows';
-// detect whether audio hardware is available and enabled
-var isAudioSupported = isWindows ? Windows.Media.Devices.MediaDevice.getDefaultAudioRenderId(Windows.Media.Devices.AudioDeviceRole.default) : true;
+// Detect whether audio hardware is available and enabled. For iOS playing audio is
+// not supported on emulators w/out sound device connected to host PC but (which is
+// the case for Sauce Labs emulators - see CB-11430)
+var isAudioSupported = isWindows ? !!Windows.Media.Devices.MediaDevice.getDefaultAudioRenderId(Windows.Media.Devices.AudioDeviceRole.default) :
+    cordova.platformId === 'ios' ? !window.SAUCELABS_ENV : true;
 
 exports.defineAutoTests = function () {
     var failed = function (done, msg, context) {
@@ -175,7 +178,21 @@ exports.defineAutoTests = function () {
             media1.release();
         });
 
-        it("media.spec.16 should return MediaError for bad filename", function (done) {
+        it("media.spec.16 should contain a pauseRecord function", function () {
+            var media1 = new Media("dummy");
+            expect(media1.pauseRecord).toBeDefined();
+            expect(typeof media1.pauseRecord).toBe('function');
+            media1.release();
+        });
+
+        it("media.spec.17 should contain a resumeRecord function", function () {
+            var media1 = new Media("dummy");
+            expect(media1.resumeRecord).toBeDefined();
+            expect(typeof media1.resumeRecord).toBe('function');
+            media1.release();
+        });
+
+        it("media.spec.18 should return MediaError for bad filename", function (done) {
             //bb10 dialog pops up, preventing tests from running
             if (cordova.platformId === 'blackberry10') {
                 pending();
@@ -210,7 +227,7 @@ exports.defineAutoTests = function () {
                 }
             });
 
-            it("media.spec.17 position should be set properly", function (done) {
+            it("media.spec.19 position should be set properly", function (done) {
                 // no audio hardware available
                 if (!isAudioSupported) {
                     pending();
@@ -240,7 +257,7 @@ exports.defineAutoTests = function () {
                 media.play();
             }, ACTUAL_PLAYBACK_TEST_TIMEOUT);
 
-            it("media.spec.18 duration should be set properly", function (done) {
+            it("media.spec.20 duration should be set properly", function (done) {
                 if (!isAudioSupported || cordova.platformId === 'blackberry10') {
                     pending();
                 }
@@ -269,7 +286,7 @@ exports.defineAutoTests = function () {
                 media.play();
             }, ACTUAL_PLAYBACK_TEST_TIMEOUT);
 
-            it("media.spec.19 should be able to resume playback after pause", function (done) {
+            it("media.spec.21 should be able to resume playback after pause", function (done) {
                 if (!isAudioSupported || cordova.platformId === 'blackberry10') {
                     pending();
                 }
@@ -312,7 +329,7 @@ exports.defineAutoTests = function () {
 
             }, ACTUAL_PLAYBACK_TEST_TIMEOUT);
 
-            it("media.spec.20 should be able to seek through file", function (done) {
+            it("media.spec.22 should be able to seek through file", function (done) {
                 if (!isAudioSupported || cordova.platformId === 'blackberry10') {
                     pending();
                 }
@@ -346,19 +363,24 @@ exports.defineAutoTests = function () {
             }, ACTUAL_PLAYBACK_TEST_TIMEOUT);
         });
 
-        it("media.spec.21 should contain a setRate function", function () {
+        it("media.spec.23 should contain a setRate function", function () {
             var media1 = new Media("dummy");
             expect(media1.setRate).toBeDefined();
             expect(typeof media1.setRate).toBe('function');
             media1.release();
         });
 
-        it("media.spec.22 playback rate should be set properly using setRate", function (done) {
+        it("media.spec.24 playback rate should be set properly using setRate", function (done) {
             if (cordova.platformId !== 'ios') {
                 expect(true).toFailWithMessage('Platform does not supported this feature');
                 pending();
-                return;
             }
+
+            // no audio hardware available
+            if (!isAudioSupported) {
+                pending();
+            }
+
             var mediaFile = 'https://cordova.apache.org/downloads/BlueZedEx.mp3',
                 successCallback,
                 context = this,
@@ -374,7 +396,8 @@ exports.defineAutoTests = function () {
                             media1.getCurrentPosition(function (position) {
                                 //in four seconds expect position to be between 4 & 10. Here, the values are chosen to give
                                 //a large enough buffer range for the position to fall in and are not based on any calculation.
-                                expect(position >= 4 && position < 10).toBeTruthy();
+                                expect(position).not.toBeLessThan(4);
+                                expect(position).toBeLessThan(10);
                                 media1.stop();
                                 media1.release();
                                 done();
@@ -386,6 +409,35 @@ exports.defineAutoTests = function () {
             var media1 = new Media(mediaFile, successCallback, failed.bind(null, done, 'media1 = new Media - Error creating Media object. Media file: ' + mediaFile, context), statusChange); // jshint ignore:line
             //make audio playback two times faster
             media1.setRate(2);
+            media1.play();
+        }, ACTUAL_PLAYBACK_TEST_TIMEOUT);
+
+        it("media.spec.25 should be able to play an audio stream", function (done) {
+            // no audio hardware available
+            if (!isAudioSupported) {
+                pending();
+            }
+
+            // The link below points to an infinite mp3 stream
+            var mediaFile = 'http://c22033-l.i.core.cdn.streamfarm.net/22033mdr/live/3087mdr_figaro/ch_classic_128.mp3',
+                successCallback,
+                context = this,
+                flag = true,
+                statusChange = function (statusCode) {
+                    console.log("status code: " + statusCode);
+                    if (statusCode == Media.MEDIA_RUNNING && flag) {
+                        //flag variable used to ensure an extra security statement to ensure that the callback is processed only once,
+                        //in case for some reason the statusChange callback is reached more than one time with the same status code.
+                        //Some information about this kind of behavior it can be found at JIRA: CB-7099
+                        flag = false;
+                        expect(true).toBe(true);
+                        media1.stop();
+                        media1.release();
+                        done();
+                    }
+                };
+
+            var media1 = new Media(mediaFile, successCallback, failed.bind(null, done, 'media1 = new Media - Error creating Media object. Media file: ' + mediaFile, context), statusChange); // jshint ignore:line
             media1.play();
         }, ACTUAL_PLAYBACK_TEST_TIMEOUT);
     });
