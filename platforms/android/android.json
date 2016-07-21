@@ -61,14 +61,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"CardIO\"><param name=\"android-package\" value=\"io.card.cordova.sdk.CardIOCordovaPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"PayPalMobile\"><param name=\"android-package\" value=\"com.paypal.cordova.sdk.PayPalMobileCordovaPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"AnalyticsPlugin\"><param name=\"android-package\" value=\"com.segment.analytics.cordova.AnalyticsPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -126,6 +118,14 @@
                         },
                         {
                             "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CardIO\"><param name=\"android-package\" value=\"io.card.cordova.sdk.CardIOCordovaPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PayPalMobile\"><param name=\"android-package\" value=\"com.paypal.cordova.sdk.PayPalMobileCordovaPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -330,12 +330,6 @@
         "cordova-plugin-add-swift-support": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "card.io.cordova.mobilesdk": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
-        "com.paypal.cordova.mobilesdk": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
         "cordova-plugin-segment": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
@@ -368,6 +362,12 @@
         "io.branch.sdk": {
             "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
             "URI_SCHEME": "bidchat",
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "card.io.cordova.mobilesdk": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "com.paypal.cordova.mobilesdk": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
@@ -509,20 +509,6 @@
             "id": "cordova-plugin-insomnia.Insomnia",
             "clobbers": [
                 "window.plugins.insomnia"
-            ]
-        },
-        {
-            "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
-            "id": "card.io.cordova.mobilesdk.CardIO",
-            "clobbers": [
-                "CardIO"
-            ]
-        },
-        {
-            "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
-            "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
-            "clobbers": [
-                "PayPalMobile"
             ]
         },
         {
@@ -823,6 +809,20 @@
             "clobbers": [
                 "Branch"
             ]
+        },
+        {
+            "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
+            "id": "card.io.cordova.mobilesdk.CardIO",
+            "clobbers": [
+                "CardIO"
+            ]
+        },
+        {
+            "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
+            "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
+            "clobbers": [
+                "PayPalMobile"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -842,8 +842,6 @@
         "cordova-plugin-insomnia": "4.2.0",
         "cordova-plugin-applepay": "0.0.1",
         "cordova-plugin-add-swift-support": "1.3.1",
-        "card.io.cordova.mobilesdk": "2.0.2",
-        "com.paypal.cordova.mobilesdk": "3.2.2",
         "cordova-plugin-segment": "0.0.2",
         "cordova.plugins.diagnostic": "3.1.1",
         "cordova-plugin-camera": "2.2.1-dev",
@@ -853,6 +851,8 @@
         "cordova-plugin-media": "2.3.1-dev",
         "cordova-plugin-facebook4": "1.7.1",
         "es6-promise-plugin": "3.0.2",
-        "io.branch.sdk": "2.1.10"
+        "io.branch.sdk": "2.1.10",
+        "card.io.cordova.mobilesdk": "2.0.2",
+        "com.paypal.cordova.mobilesdk": "3.2.2"
     }
 }

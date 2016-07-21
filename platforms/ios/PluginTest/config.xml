@@ -51,12 +51,6 @@
     <feature name="ApplePay">
         <param name="ios-package" value="CDVApplePay" />
     </feature>
-    <feature name="CardIO">
-        <param name="ios-package" onload="false" value="CardIOCordovaPlugin" />
-    </feature>
-    <feature name="PayPalMobile">
-        <param name="ios-package" onload="true" value="PayPalMobileCordovaPlugin" />
-    </feature>
     <feature name="AnalyticsPlugin">
         <param name="ios-package" value="AnalyticsPlugin" />
         <param name="onload" value="true" />
@@ -94,6 +88,12 @@
     <access origin="https://*.akamaihd.net" />
     <feature name="BranchSDK">
         <param name="ios-package" value="BranchSDK" />
+    </feature>
+    <feature name="CardIO">
+        <param name="ios-package" onload="false" value="CardIOCordovaPlugin" />
+    </feature>
+    <feature name="PayPalMobile">
+        <param name="ios-package" onload="true" value="PayPalMobileCordovaPlugin" />
     </feature>
     <name>PluginTest</name>
     <description>

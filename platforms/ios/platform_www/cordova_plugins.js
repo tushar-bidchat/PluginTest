@@ -185,22 +185,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
-        "id": "card.io.cordova.mobilesdk.CardIO",
-        "pluginId": "card.io.cordova.mobilesdk",
-        "clobbers": [
-            "CardIO"
-        ]
-    },
-    {
-        "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
-        "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
-        "pluginId": "com.paypal.cordova.mobilesdk",
-        "clobbers": [
-            "PayPalMobile"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-segment/www/analytics.js",
         "id": "cordova-plugin-segment.analytics",
         "pluginId": "cordova-plugin-segment",
@@ -528,6 +512,22 @@ module.exports = [
         "clobbers": [
             "Branch"
         ]
+    },
+    {
+        "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
+        "id": "card.io.cordova.mobilesdk.CardIO",
+        "pluginId": "card.io.cordova.mobilesdk",
+        "clobbers": [
+            "CardIO"
+        ]
+    },
+    {
+        "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
+        "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
+        "pluginId": "com.paypal.cordova.mobilesdk",
+        "clobbers": [
+            "PayPalMobile"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -549,8 +549,6 @@ module.exports.metadata =
     "cordova-plugin-insomnia": "4.2.0",
     "cordova-plugin-applepay": "0.0.1",
     "cordova-plugin-add-swift-support": "1.3.1",
-    "card.io.cordova.mobilesdk": "2.0.2",
-    "com.paypal.cordova.mobilesdk": "3.2.2",
     "cordova-plugin-segment": "0.0.2",
     "cordova.plugins.diagnostic": "3.1.1",
     "cordova-plugin-camera": "2.2.1-dev",
@@ -560,7 +558,9 @@ module.exports.metadata =
     "cordova-plugin-media": "2.3.1-dev",
     "cordova-plugin-facebook4": "1.7.1",
     "es6-promise-plugin": "3.0.2",
-    "io.branch.sdk": "2.1.10"
+    "io.branch.sdk": "2.1.10",
+    "card.io.cordova.mobilesdk": "2.0.2",
+    "com.paypal.cordova.mobilesdk": "3.2.2"
 }
 // BOTTOM OF METADATA
 });

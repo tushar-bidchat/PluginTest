@@ -55,9 +55,6 @@
         "cordova-plugin-add-swift-support": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "com.paypal.cordova.mobilesdk": {
-            "PACKAGE_NAME": "com.bidchat.plugintest"
-        },
         "cordova-plugin-segment": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
@@ -88,16 +85,19 @@
             "BRANCH_KEY": "key_live_opa0cY7cr49crPV3j4nH8eenwsgAqOj5",
             "URI_SCHEME": "bidchat",
             "PACKAGE_NAME": "com.bidchat.plugintest"
+        },
+        "com.paypal.cordova.mobilesdk": {
+            "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "card.io.cordova.mobilesdk": {
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         },
-        "es6-promise-plugin": {
+        "card.io.cordova.mobilesdk": {
             "PACKAGE_NAME": "com.bidchat.plugintest"
         }
     }
